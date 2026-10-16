@@ -1,0 +1,1614 @@
+{
+  "status": "source_review_and_static_lvgl_renders",
+  "screen_count": 29,
+  "screens": [
+    {
+      "name": "add_task_p1",
+      "figma_id": "170:62",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Agregar Tarea",
+        "Nombre de la tarea: ",
+        "Materia:"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 22",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p2",
+          "action": {
+            "type": "NODE",
+            "destinationId": "176:131",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p2",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p1.png",
+      "number": 16,
+      "assessment": "Nombre y materia, X y siguiente.",
+      "proposal": "Paso 1 del borrador de proyecto. Validar nombre; seleccionar/editar materia. X solicita descartar solo si hay cambios."
+    },
+    {
+      "name": "add_task_p1_b",
+      "figma_id": "197:573",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Tarea Rápida",
+        "Nombre de la tarea: ",
+        "EMPEZAR"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 22",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 22",
+          "trigger": {
+            "type": "ON_DRAG"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 29",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p1_c",
+          "action": {
+            "type": "NODE",
+            "destinationId": "199:633",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p1_c",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p1_b.png",
+      "number": 27,
+      "assessment": "Formulario de tarea rápida y duración.",
+      "proposal": "Rama independiente. Validar nombre y duración mayor que cero. Empezar → sesión activa. X → origen."
+    },
+    {
+      "name": "add_task_p1_c",
+      "figma_id": "199:633",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Tarea Rápida",
+        "Humanidades",
+        "00:20:00"
+      ],
+      "figma_reactions": [
+        {
+          "node": "akar-icons:circle-check-fill",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p1_d",
+          "action": {
+            "type": "NODE",
+            "destinationId": "199:680",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 22",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p1_d",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "today",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p1_c.png",
+      "number": 28,
+      "assessment": "Temporizador de ejemplo 00:20:00, check y X.",
+      "proposal": "Mostrar tiempo restante real. Check → completar con registro; X → cancelar con confirmación si procede. Salir de vista no debe completar ni reiniciar la sesión."
+    },
+    {
+      "name": "add_task_p1_d",
+      "figma_id": "199:680",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Humanidades",
+        "Completado"
+      ],
+      "figma_reactions": [
+        {
+          "node": "akar-icons:circle-check-fill",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p1_d.png",
+      "number": 29,
+      "assessment": "Confirmación Completado con Humanidades.",
+      "proposal": "Nombre de la tarea real; check → origen/Hoy actualizado. Llegar solo tras completar, nunca simplemente por navegar."
+    },
+    {
+      "name": "add_task_p2",
+      "figma_id": "176:131",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Fecha de entrega: ",
+        "Descripción del proyecto:"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p3",
+          "action": {
+            "type": "NODE",
+            "destinationId": "176:200",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 21",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p1",
+          "action": {
+            "type": "NODE",
+            "destinationId": "170:62",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p3",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p1",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p2.png",
+      "number": 17,
+      "assessment": "Fecha final y descripción.",
+      "proposal": "Paso 2. Fecha con selector; descripción editable. Anterior conserva el borrador."
+    },
+    {
+      "name": "add_task_p3",
+      "figma_id": "176:200",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Crear fechas límite a partir del:",
+        "Inicio",
+        "Entrega Final"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p4",
+          "action": {
+            "type": "NODE",
+            "destinationId": "176:227",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 21",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p2",
+          "action": {
+            "type": "NODE",
+            "destinationId": "176:131",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p4",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p2",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p3.png",
+      "number": 18,
+      "assessment": "Inicio y entrega final con hora.",
+      "proposal": "Paso 3. Heredar la entrega del paso 2, permitir ajustarla y exigir final posterior al inicio. No pedir dos fechas finales independientes."
+    },
+    {
+      "name": "add_task_p4",
+      "figma_id": "176:227",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Generar fechas de entrega"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 21",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p3",
+          "action": {
+            "type": "NODE",
+            "destinationId": "176:200",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 26",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5_d",
+          "action": {
+            "type": "NODE",
+            "destinationId": "179:3",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p3",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5_d",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p4.png",
+      "number": 19,
+      "assessment": "Botón Generar fechas.",
+      "proposal": "Resumen y confirmación de generación. Un envío por solicitud; anterior → paso 3."
+    },
+    {
+      "name": "add_task_p5",
+      "figma_id": "180:86",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Línea de tiempo Final Research Paper",
+        "Seminario de Investigación de Diseño",
+        "octubre",
+        "2026",
+        "L",
+        "M",
+        "X",
+        "J",
+        "V",
+        "S",
+        "D",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "desglose_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "48:408",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Button - Mes siguiente",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "182:191",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "desglose_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p5.png",
+      "number": 22,
+      "assessment": "Calendario de octubre de ejemplo.",
+      "proposal": "Primera representación del componente calendario de proyecto. Selección por fecha; siguiente mes actualiza datos."
+    },
+    {
+      "name": "add_task_p5_b",
+      "figma_id": "182:191",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Línea de tiempo Final Research Paper",
+        "Seminario de Investigación de Diseño",
+        "Noviembre",
+        "2026",
+        "L",
+        "M",
+        "X",
+        "J",
+        "V",
+        "S",
+        "D",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "desglose_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "48:408",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Button - Mes anterior",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5",
+          "action": {
+            "type": "NODE",
+            "destinationId": "180:86",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Button - Mes siguiente",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5_c",
+          "action": {
+            "type": "NODE",
+            "destinationId": "182:300",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "desglose_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5_c",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p5_b.png",
+      "number": 23,
+      "assessment": "Calendario de noviembre; contiene 31 en la maqueta.",
+      "proposal": "Mismo componente, otro mes. Calcular días válidos y primer día de semana. No limitar a octubre–diciembre de 2026."
+    },
+    {
+      "name": "add_task_p5_c",
+      "figma_id": "182:300",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Línea de tiempo Final Research Paper",
+        "Seminario de Investigación de Diseño",
+        "Diciembre",
+        "2026",
+        "L",
+        "M",
+        "X",
+        "J",
+        "V",
+        "S",
+        "D",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "desglose_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "48:408",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Button - Mes anterior",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "182:191",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "desglose_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p5_c.png",
+      "number": 24,
+      "assessment": "Calendario de diciembre y fechas resaltadas.",
+      "proposal": "Mismo componente. Meses anterior/siguiente y fechas de hitos reales. Último mes depende del proyecto."
+    },
+    {
+      "name": "add_task_p5_d",
+      "figma_id": "179:3",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Generando línea de tiempo..."
+      ],
+      "figma_reactions": [
+        {
+          "node": "Add Task p5",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5_e",
+          "action": {
+            "type": "NODE",
+            "destinationId": "180:21",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5_e",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p5_d.png",
+      "number": 20,
+      "assessment": "Carga; avanza al tocar toda la pantalla.",
+      "proposal": "Estado de solicitud pendiente. Éxito real → resumen; error → reintentar/volver sin perder datos. Un toque no equivale a éxito."
+    },
+    {
+      "name": "add_task_p5_e",
+      "figma_id": "180:21",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Línea de tiempo Final Research Paper",
+        "Seminario de Investigación de Diseño"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 20",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p5",
+          "action": {
+            "type": "NODE",
+            "destinationId": "180:86",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p5",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/add_task_p5_e.png",
+      "number": 21,
+      "assessment": "Portada del proyecto y línea de tiempo.",
+      "proposal": "Resumen del resultado generado. Siguiente → calendario del intervalo del proyecto. Título/materia del borrador."
+    },
+    {
+      "name": "desglose",
+      "figma_id": "182:428",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Notificaciones",
+        "Agregar Tarea",
+        "Sonido ",
+        "Luz/Color ",
+        "Tono "
+      ],
+      "figma_reactions": [
+        {
+          "node": "akar-icons:circle-check-fill",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today_c",
+          "action": {
+            "type": "NODE",
+            "destinationId": "190:517",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today_c",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/desglose.png",
+      "number": 26,
+      "assessment": "Notificaciones: Sonido/Luz-Color/Tono y Agregar tarea.",
+      "proposal": "Configurar avisos del proyecto. Campos reales. Check → guardar; éxito → Hoy actualizado. Error mantiene el borrador y permite reintentar."
+    },
+    {
+      "name": "desglose_b",
+      "figma_id": "48:408",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Desglose",
+        "18 Oct - 23:59",
+        "23 Oct - 23:59",
+        "31 Oct - 23:59",
+        "03 Nov - 23:59",
+        "Entregar 5 fuentes académicas iniciales",
+        "Lista final de 15 fuentes y casos de estudio \ncompletada.",
+        "Lectura y anotación de todas las fuentes finalizada.",
+        "Esquema de investigación "
+      ],
+      "figma_reactions": [
+        {
+          "node": "akar-icons:circle-check-fill",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "desglose",
+          "action": {
+            "type": "NODE",
+            "destinationId": "182:428",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "desglose",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/desglose_b.png",
+      "number": 25,
+      "assessment": "Lista de entregables, fechas, lápiz y flechas.",
+      "proposal": "Revisión editable del plan generado. Flecha de fila abre/edita ese hito; check acepta el borrador y pasa a notificaciones. No es la lista global de tareas."
+    },
+    {
+      "name": "esta_semana",
+      "figma_id": "97:26",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "12-18 de octubre",
+        "Esta\nSemana",
+        "Web Design",
+        "Practicum 1",
+        "Practicum 2\n",
+        "Web Design",
+        "Web Design",
+        "Web Design",
+        "Web Design",
+        "Web Design"
+      ],
+      "figma_reactions": [],
+      "xml_routes": [],
+      "screenshot": "screens/esta_semana.png",
+      "number": 15,
+      "assessment": "Agenda semanal orbital sin salida declarada.",
+      "proposal": "Vista complementaria; rango de siete días y eventos reales. Volver a día y a Hoy; tocar evento abre el proyecto seleccionado."
+    },
+    {
+      "name": "frame_1",
+      "figma_id": "5:3",
+      "page": "Page 1",
+      "text_from_figma": [
+        "Hola, Soy Havit.",
+        "Vamos a crecer juntos"
+      ],
+      "figma_reactions": [],
+      "xml_routes": [],
+      "screenshot": "screens/frame_1.png",
+      "number": 1,
+      "assessment": "Bienvenida antigua; diseño anterior.",
+      "proposal": "Referencia archivada. Reemplazar visualmente por `intro_4`, conservar la lógica de primera configuración."
+    },
+    {
+      "name": "frame_2",
+      "figma_id": "7:447",
+      "page": "Page 1",
+      "text_from_figma": [
+        "Inicia Sesión",
+        "Tu próximo paso empieza aquí",
+        "Welcome\nBack ROM"
+      ],
+      "figma_reactions": [],
+      "xml_routes": [],
+      "screenshot": "screens/frame_2.png",
+      "number": 2,
+      "assessment": "Inicio de sesión antiguo con Google y textos de ejemplo.",
+      "proposal": "Referencia archivada. Usar `log_in` conectado a vinculación; no simular autenticación por un toque."
+    },
+    {
+      "name": "frame_3",
+      "figma_id": "9:518",
+      "page": "Page 1",
+      "text_from_figma": [
+        "Bienvenido de nuevo.",
+        "ROM.",
+        "Continuar"
+      ],
+      "figma_reactions": [],
+      "xml_routes": [],
+      "screenshot": "screens/frame_3.png",
+      "number": 3,
+      "assessment": "Saludo antiguo con ROM y Continuar.",
+      "proposal": "Referencia archivada. Usar `welcome_back` con nombre real y salida automática; un toque puede omitir el saludo."
+    },
+    {
+      "name": "home",
+      "figma_id": "165:2",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "10 de octubre",
+        "Hoy",
+        "10:00 am",
+        "Seminario 1",
+        "Web Design",
+        "Practicum 2",
+        "Mobile Design"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Home",
+          "trigger": {
+            "type": "ON_DRAG"
+          },
+          "target": "esta_semana",
+          "action": {
+            "type": "NODE",
+            "destinationId": "97:26",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/home.png",
+      "number": 14,
+      "assessment": "Agenda diaria orbital con materias y hora.",
+      "proposal": "Vista de agenda del día; calendario de Hoy o toque del centro → esta vista. Arrastre horizontal → semana, con alternativa visible."
+    },
+    {
+      "name": "intro_1",
+      "figma_id": "46:13",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [],
+      "figma_reactions": [
+        {
+          "node": "Intro 1",
+          "trigger": {
+            "type": "AFTER_TIMEOUT",
+            "timeout": 0.10000000149011612
+          },
+          "target": "intro_2",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:196",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/intro_1.png",
+      "number": 4,
+      "assessment": "Ojos cerrados; tiempo de Figma no convertido.",
+      "proposal": "Pose del componente de arranque, no destino navegable."
+    },
+    {
+      "name": "intro_2",
+      "figma_id": "46:196",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [],
+      "figma_reactions": [
+        {
+          "node": "Intro 2",
+          "trigger": {
+            "type": "AFTER_TIMEOUT",
+            "timeout": 0.05000000074505806
+          },
+          "target": "intro_3",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:214",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/intro_2.png",
+      "number": 5,
+      "assessment": "Ojos abiertos; tiempo de Figma no convertido.",
+      "proposal": "Pose del mismo componente."
+    },
+    {
+      "name": "intro_3",
+      "figma_id": "46:214",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [],
+      "figma_reactions": [
+        {
+          "node": "Intro 3",
+          "trigger": {
+            "type": "AFTER_TIMEOUT",
+            "timeout": 1
+          },
+          "target": "intro_4",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:221",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/intro_3.png",
+      "number": 6,
+      "assessment": "Apertura intermedia; Figma conduce a presentación.",
+      "proposal": "Pose del mismo componente; la salida depende de los datos de arranque."
+    },
+    {
+      "name": "intro_4",
+      "figma_id": "46:221",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Hola, Soy Azlo.",
+        "Empecemos por aquí"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Ellipse 2",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "log_in",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:235",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "log_in",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/intro_4.png",
+      "number": 8,
+      "assessment": "Presentación V2; dice «Azlo».",
+      "proposal": "Mostrar durante primera configuración. Flecha → `log_in`. Unificar el nombre con HAVIT antes de publicar."
+    },
+    {
+      "name": "intro_5",
+      "figma_id": "82:4",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [],
+      "figma_reactions": [
+        {
+          "node": "Intro 5",
+          "trigger": {
+            "type": "AFTER_TIMEOUT",
+            "timeout": 0.10000000149011612
+          },
+          "target": "intro_2",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:196",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/intro_5.png",
+      "number": 7,
+      "assessment": "Otra pose cerrada con enlace a `intro_2`.",
+      "proposal": "Integrar al parpadeo; no añadir un paso de usuario."
+    },
+    {
+      "name": "log_in",
+      "figma_id": "46:235",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Inicia Sesión",
+        "Con Dispositivo"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 4",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "welcome_back",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:281",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "welcome_back",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/log_in.png",
+      "number": 9,
+      "assessment": "Entrada V2; botón Google y «Con Dispositivo».",
+      "proposal": "Botón → vinculación anterior. El icono sugiere OAuth directo, pero el firmware usa PIN/web: ajustar el mensaje a «Vincular dispositivo»."
+    },
+    {
+      "name": "today",
+      "figma_id": "46:304",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "10 de octubre",
+        "Hoy",
+        "0 tareas"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 17",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "180:31",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/today.png",
+      "number": 11,
+      "assessment": "Menú radial, 0 tareas, perfil/lista/calendario/+.",
+      "proposal": "Principal canónica. Fecha y contador dinámicos. Dar acción a los cuatro accesos y al centro."
+    },
+    {
+      "name": "today_b",
+      "figma_id": "180:31",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "18 de octubre",
+        "Hoy",
+        "0 tareas",
+        "Agregar \nTarea",
+        "Tarea \nRápida"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 17",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p1",
+          "action": {
+            "type": "NODE",
+            "destinationId": "170:62",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 18",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "add_task_p1_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "197:573",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        },
+        {
+          "node": "Group 22",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p1",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "add_task_p1_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        },
+        {
+          "trigger": "clicked",
+          "screen": "today",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/today_b.png",
+      "number": 13,
+      "assessment": "Selector Agregar tarea/Tarea rápida; fecha distinta.",
+      "proposal": "Overlay del botón +. X → pantalla que lo abrió; heredar fecha y contador."
+    },
+    {
+      "name": "today_c",
+      "figma_id": "190:517",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "10 de octubre",
+        "Hoy",
+        "1 tarea"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Group 17",
+          "trigger": {
+            "type": "ON_CLICK"
+          },
+          "target": "today_b",
+          "action": {
+            "type": "NODE",
+            "destinationId": "180:31",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_OUT",
+              "easingDetail": {
+                "type": "EASE_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [
+        {
+          "trigger": "clicked",
+          "screen": "today_b",
+          "anim_type": "fade_in",
+          "duration": "300"
+        }
+      ],
+      "screenshot": "screens/today_c.png",
+      "number": 12,
+      "assessment": "Figma representa 1 tarea, pero el XML actual muestra 0.",
+      "proposal": "Variante ocupada de Hoy; compartir plantilla y estado con `today`, no cambiar de archivo para aumentar el contador."
+    },
+    {
+      "name": "welcome_back",
+      "figma_id": "46:281",
+      "page": "Wireframe Dark Dev",
+      "text_from_figma": [
+        "Bienvenido de nuevo",
+        "Leo!"
+      ],
+      "figma_reactions": [
+        {
+          "node": "Welcome Back",
+          "trigger": {
+            "type": "AFTER_TIMEOUT",
+            "timeout": 0.8
+          },
+          "target": "today",
+          "action": {
+            "type": "NODE",
+            "destinationId": "46:304",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "duration": 0.30000001192092896,
+              "easing": "EASE_IN_AND_OUT",
+              "easingDetail": {
+                "type": "EASE_IN_AND_OUT"
+              }
+            },
+            "resetVideoPosition": false
+          }
+        }
+      ],
+      "xml_routes": [],
+      "screenshot": "screens/welcome_back.png",
+      "number": 10,
+      "assessment": "Saludo V2 con «Leo!»; tiempo de 0,8 s no importado.",
+      "proposal": "Nombre de cuenta y salida a Hoy tras sincronización inicial. No repetir en cada reconexión."
+    }
+  ]
+}

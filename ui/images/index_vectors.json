@@ -1,0 +1,617 @@
+[
+  {
+    "nodeId": "9:570",
+    "nodeName": "Vector 4",
+    "name": "image_vec_9_570",
+    "svgPath": "vectors/9_570.svg",
+    "width": 25,
+    "height": 14,
+    "pngPath": "images/vec_9_570.png"
+  },
+  {
+    "nodeId": "9:466",
+    "nodeName": "Vector 1",
+    "name": "image_vec_9_466",
+    "svgPath": "vectors/9_466.svg",
+    "width": 20,
+    "height": 74,
+    "pngPath": "images/vec_9_466.png"
+  },
+  {
+    "nodeId": "9:535",
+    "nodeName": "Vector 2",
+    "name": "image_vec_9_535",
+    "svgPath": "vectors/9_535.svg",
+    "width": 129,
+    "height": 0,
+    "pngPath": "images/vec_9_535.png"
+  },
+  {
+    "nodeId": "9:540",
+    "nodeName": "Vector 3",
+    "name": "image_vec_9_540",
+    "svgPath": "vectors/9_540.svg",
+    "width": 25,
+    "height": 14,
+    "pngPath": "images/vec_9_540.png"
+  },
+  {
+    "nodeId": "46:233",
+    "nodeName": "Vector 4",
+    "name": "image_vec_46_233",
+    "svgPath": "vectors/46_233.svg",
+    "width": 25,
+    "height": 14,
+    "pngPath": "images/vec_46_233.png"
+  },
+  {
+    "nodeId": "46:255",
+    "nodeName": "ant-design:google-outlined",
+    "name": "image_ant_design_google_outlined",
+    "svgPath": "vectors/46_255.svg",
+    "width": 35,
+    "height": 36,
+    "pngPath": "images/ant_design_google_outlined.png"
+  },
+  {
+    "nodeId": "165:36",
+    "nodeName": "Vector",
+    "name": "image_vec_165_36",
+    "svgPath": "vectors/165_36.svg",
+    "width": 32,
+    "height": 12,
+    "pngPath": "images/vec_165_36.png"
+  },
+  {
+    "nodeId": "165:37",
+    "nodeName": "Vector",
+    "name": "image_vec_165_37",
+    "svgPath": "vectors/165_37.svg",
+    "width": 12,
+    "height": 12,
+    "pngPath": "images/vec_165_37.png"
+  },
+  {
+    "nodeId": "165:45",
+    "nodeName": "Vector",
+    "name": "image_vec_165_45",
+    "svgPath": "vectors/165_45.svg",
+    "width": 33,
+    "height": 30,
+    "pngPath": "images/vec_165_45.png"
+  },
+  {
+    "nodeId": "165:46",
+    "nodeName": "Vector",
+    "name": "image_vec_165_46",
+    "svgPath": "vectors/165_46.svg",
+    "width": 33,
+    "height": 13,
+    "pngPath": "images/vec_165_46.png"
+  },
+  {
+    "nodeId": "170:54",
+    "nodeName": "Vector",
+    "name": "image_vec_170_54",
+    "svgPath": "vectors/170_54.svg",
+    "width": 27,
+    "height": 32,
+    "pngPath": "images/vec_170_54.png"
+  },
+  {
+    "nodeId": "170:55",
+    "nodeName": "Vector",
+    "name": "image_vec_170_55",
+    "svgPath": "vectors/170_55.svg",
+    "width": 17,
+    "height": 17,
+    "pngPath": "images/vec_170_55.png"
+  },
+  {
+    "nodeId": "170:56",
+    "nodeName": "Vector",
+    "name": "image_vec_170_56",
+    "svgPath": "vectors/170_56.svg",
+    "width": 13,
+    "height": 7,
+    "pngPath": "images/vec_170_56.png"
+  },
+  {
+    "nodeId": "170:58",
+    "nodeName": "andrsrxn:plus",
+    "name": "image_andrsrxn_plus",
+    "svgPath": "vectors/170_58.svg",
+    "width": 31,
+    "height": 31,
+    "aliasNodeIds": [
+      "190:549"
+    ],
+    "pngPath": "images/andrsrxn_plus.png"
+  },
+  {
+    "nodeId": "180:77",
+    "nodeName": "hugeicons:cancel-01",
+    "name": "image_hugeicons_cancel_01_18077",
+    "svgPath": "vectors/180_77.svg",
+    "width": 14,
+    "height": 14,
+    "aliasNodeIds": [
+      "176:128",
+      "197:591"
+    ],
+    "pngPath": "images/hugeicons_cancel_01_18077.png"
+  },
+  {
+    "nodeId": "199:693",
+    "nodeName": "hugeicons:cancel-01",
+    "name": "image_hugeicons_cancel_01_199693",
+    "svgPath": "vectors/199_693.svg",
+    "width": 26,
+    "height": 26,
+    "pngPath": "images/hugeicons_cancel_01_199693.png"
+  },
+  {
+    "nodeId": "176:104",
+    "nodeName": "Vector 5",
+    "name": "image_vec_176_104",
+    "svgPath": "vectors/176_104.svg",
+    "width": 250,
+    "height": 0,
+    "pngPath": "images/vec_176_104.png"
+  },
+  {
+    "nodeId": "176:108",
+    "nodeName": "Vector 6",
+    "name": "image_vec_176_108",
+    "svgPath": "vectors/176_108.svg",
+    "width": 250,
+    "height": 0,
+    "pngPath": "images/vec_176_108.png"
+  },
+  {
+    "nodeId": "176:106",
+    "nodeName": "ic:baseline-keyboard-voice",
+    "name": "image_ic_baseline_keyboard_voice",
+    "svgPath": "vectors/176_106.svg",
+    "width": 14,
+    "height": 19,
+    "aliasNodeIds": [
+      "176:110",
+      "197:584",
+      "176:199"
+    ],
+    "pngPath": "images/ic_baseline_keyboard_voice.png"
+  },
+  {
+    "nodeId": "176:161",
+    "nodeName": "akar-icons:arrow-down",
+    "name": "image_akar_icons_arrow_down_176161",
+    "svgPath": "vectors/176_161.svg",
+    "width": 19,
+    "height": 22,
+    "aliasNodeIds": [
+      "176:148",
+      "176:209",
+      "180:96",
+      "182:201",
+      "182:310",
+      "180:84"
+    ],
+    "pngPath": "images/akar_icons_arrow_down_176161.png"
+  },
+  {
+    "nodeId": "176:157",
+    "nodeName": "akar-icons:arrow-down",
+    "name": "image_akar_icons_arrow_down_176157",
+    "svgPath": "vectors/176_157.svg",
+    "width": 19,
+    "height": 22,
+    "aliasNodeIds": [
+      "176:213",
+      "176:240"
+    ],
+    "pngPath": "images/akar_icons_arrow_down_176157.png"
+  },
+  {
+    "nodeId": "176:222",
+    "nodeName": "bitcoin-icons:edit-filled",
+    "name": "image_bitcoin_icons_edit_filled_176222",
+    "svgPath": "vectors/176_222.svg",
+    "width": 16,
+    "height": 16,
+    "aliasNodeIds": [
+      "176:224",
+      "197:597",
+      "176:226"
+    ],
+    "pngPath": "images/bitcoin_icons_edit_filled_176222.png"
+  },
+  {
+    "nodeId": "182:424",
+    "nodeName": "bitcoin-icons:edit-filled",
+    "name": "image_bitcoin_icons_edit_filled_182424",
+    "svgPath": "vectors/182_424.svg",
+    "width": 21,
+    "height": 21,
+    "pngPath": "images/bitcoin_icons_edit_filled_182424.png"
+  },
+  {
+    "nodeId": "197:581",
+    "nodeName": "Vector 5",
+    "name": "image_vec_197_581",
+    "svgPath": "vectors/197_581.svg",
+    "width": 250,
+    "height": 0,
+    "pngPath": "images/vec_197_581.png"
+  },
+  {
+    "nodeId": "199:671",
+    "nodeName": "Vector",
+    "name": "image_vec_199_671",
+    "svgPath": "vectors/199_671.svg",
+    "width": 22,
+    "height": 22,
+    "pngPath": "images/vec_199_671.png"
+  },
+  {
+    "nodeId": "199:672",
+    "nodeName": "Vector",
+    "name": "image_vec_199_672",
+    "svgPath": "vectors/199_672.svg",
+    "width": 7,
+    "height": 7,
+    "pngPath": "images/vec_199_672.png"
+  },
+  {
+    "nodeId": "199:677",
+    "nodeName": "akar-icons:circle-check-fill",
+    "name": "image_akar_icons_circle_check_fill_199677",
+    "svgPath": "vectors/199_677.svg",
+    "width": 57,
+    "height": 57,
+    "aliasNodeIds": [
+      "199:688"
+    ],
+    "pngPath": "images/akar_icons_circle_check_fill_199677.png"
+  },
+  {
+    "nodeId": "190:478",
+    "nodeName": "akar-icons:circle-check-fill",
+    "name": "image_akar_icons_circle_check_fill_190478",
+    "svgPath": "vectors/190_478.svg",
+    "width": 39,
+    "height": 39,
+    "pngPath": "images/akar_icons_circle_check_fill_190478.png"
+  },
+  {
+    "nodeId": "182:427",
+    "nodeName": "akar-icons:circle-check-fill",
+    "name": "image_akar_icons_circle_check_fill_182427",
+    "svgPath": "vectors/182_427.svg",
+    "width": 36,
+    "height": 36,
+    "pngPath": "images/akar_icons_circle_check_fill_182427.png"
+  },
+  {
+    "nodeId": "190:531",
+    "nodeName": "Vector",
+    "name": "image_vec_190_531",
+    "svgPath": "vectors/190_531.svg",
+    "width": 32,
+    "height": 12,
+    "pngPath": "images/vec_190_531.png"
+  },
+  {
+    "nodeId": "190:532",
+    "nodeName": "Vector",
+    "name": "image_vec_190_532",
+    "svgPath": "vectors/190_532.svg",
+    "width": 12,
+    "height": 12,
+    "pngPath": "images/vec_190_532.png"
+  },
+  {
+    "nodeId": "190:537",
+    "nodeName": "Vector",
+    "name": "image_vec_190_537",
+    "svgPath": "vectors/190_537.svg",
+    "width": 33,
+    "height": 30,
+    "pngPath": "images/vec_190_537.png"
+  },
+  {
+    "nodeId": "190:538",
+    "nodeName": "Vector",
+    "name": "image_vec_190_538",
+    "svgPath": "vectors/190_538.svg",
+    "width": 33,
+    "height": 13,
+    "pngPath": "images/vec_190_538.png"
+  },
+  {
+    "nodeId": "190:543",
+    "nodeName": "Vector",
+    "name": "image_vec_190_543",
+    "svgPath": "vectors/190_543.svg",
+    "width": 27,
+    "height": 32,
+    "pngPath": "images/vec_190_543.png"
+  },
+  {
+    "nodeId": "190:544",
+    "nodeName": "Vector",
+    "name": "image_vec_190_544",
+    "svgPath": "vectors/190_544.svg",
+    "width": 17,
+    "height": 17,
+    "pngPath": "images/vec_190_544.png"
+  },
+  {
+    "nodeId": "190:545",
+    "nodeName": "Vector",
+    "name": "image_vec_190_545",
+    "svgPath": "vectors/190_545.svg",
+    "width": 13,
+    "height": 7,
+    "pngPath": "images/vec_190_545.png"
+  },
+  {
+    "nodeId": "176:193",
+    "nodeName": "ant-design:calendar-filled",
+    "name": "image_ant_design_calendar_filled_176193",
+    "svgPath": "vectors/176_193.svg",
+    "width": 13,
+    "height": 13,
+    "pngPath": "images/ant_design_calendar_filled_176193.png"
+  },
+  {
+    "nodeId": "176:169",
+    "nodeName": "ant-design:calendar-filled",
+    "name": "image_ant_design_calendar_filled_176169",
+    "svgPath": "vectors/176_169.svg",
+    "width": 15,
+    "height": 15,
+    "aliasNodeIds": [
+      "176:174"
+    ],
+    "pngPath": "images/ant_design_calendar_filled_176169.png"
+  },
+  {
+    "nodeId": "176:197",
+    "nodeName": "Vector 6",
+    "name": "image_vec_176_197",
+    "svgPath": "vectors/176_197.svg",
+    "width": 250,
+    "height": 0,
+    "pngPath": "images/vec_176_197.png"
+  },
+  {
+    "nodeId": "190:474",
+    "nodeName": "fluent:sound-wave-circle-16-filled",
+    "name": "image_fluent_sound_wave_circle_16_filled",
+    "svgPath": "vectors/190_474.svg",
+    "width": 23,
+    "height": 23,
+    "pngPath": "images/fluent_sound_wave_circle_16_filled.png"
+  },
+  {
+    "nodeId": "190:476",
+    "nodeName": "fluent:person-voice-32-filled",
+    "name": "image_fluent_person_voice_32_filled",
+    "svgPath": "vectors/190_476.svg",
+    "width": 20,
+    "height": 20,
+    "pngPath": "images/fluent_person_voice_32_filled.png"
+  },
+  {
+    "nodeId": "190:483",
+    "nodeName": "lets-icons:arrow-drop-down",
+    "name": "image_lets_icons_arrow_drop_down",
+    "svgPath": "vectors/190_483.svg",
+    "width": 8,
+    "height": 6,
+    "aliasNodeIds": [
+      "190:491",
+      "190:494"
+    ],
+    "pngPath": "images/lets_icons_arrow_drop_down.png"
+  },
+  {
+    "nodeId": "176:179",
+    "nodeName": "Vector",
+    "name": "image_vec_176_179",
+    "svgPath": "vectors/176_179.svg",
+    "width": 14,
+    "height": 14,
+    "pngPath": "images/vec_176_179.png"
+  },
+  {
+    "nodeId": "176:180",
+    "nodeName": "Vector",
+    "name": "image_vec_176_180",
+    "svgPath": "vectors/176_180.svg",
+    "width": 4,
+    "height": 4,
+    "pngPath": "images/vec_176_180.png"
+  },
+  {
+    "nodeId": "176:187",
+    "nodeName": "Vector",
+    "name": "image_vec_176_187",
+    "svgPath": "vectors/176_187.svg",
+    "width": 14,
+    "height": 14,
+    "pngPath": "images/vec_176_187.png"
+  },
+  {
+    "nodeId": "176:188",
+    "nodeName": "Vector",
+    "name": "image_vec_176_188",
+    "svgPath": "vectors/176_188.svg",
+    "width": 4,
+    "height": 4,
+    "pngPath": "images/vec_176_188.png"
+  },
+  {
+    "nodeId": "96:7",
+    "nodeName": "Vector",
+    "name": "image_vec_96_7",
+    "svgPath": "vectors/96_7.svg",
+    "width": 31,
+    "height": 31,
+    "pngPath": "images/vec_96_7.png"
+  },
+  {
+    "nodeId": "96:8",
+    "nodeName": "Vector",
+    "name": "image_vec_96_8",
+    "svgPath": "vectors/96_8.svg",
+    "width": 15,
+    "height": 3,
+    "pngPath": "images/vec_96_8.png"
+  },
+  {
+    "nodeId": "96:9",
+    "nodeName": "Vector",
+    "name": "image_vec_96_9",
+    "svgPath": "vectors/96_9.svg",
+    "width": 8,
+    "height": 12,
+    "pngPath": "images/vec_96_9.png"
+  },
+  {
+    "nodeId": "96:12",
+    "nodeName": "Vector",
+    "name": "image_vec_96_12",
+    "svgPath": "vectors/96_12.svg",
+    "width": 31,
+    "height": 31,
+    "pngPath": "images/vec_96_12.png"
+  },
+  {
+    "nodeId": "96:13",
+    "nodeName": "Vector",
+    "name": "image_vec_96_13",
+    "svgPath": "vectors/96_13.svg",
+    "width": 15,
+    "height": 3,
+    "pngPath": "images/vec_96_13.png"
+  },
+  {
+    "nodeId": "96:14",
+    "nodeName": "Vector",
+    "name": "image_vec_96_14",
+    "svgPath": "vectors/96_14.svg",
+    "width": 8,
+    "height": 12,
+    "pngPath": "images/vec_96_14.png"
+  },
+  {
+    "nodeId": "96:17",
+    "nodeName": "Vector",
+    "name": "image_vec_96_17",
+    "svgPath": "vectors/96_17.svg",
+    "width": 28,
+    "height": 28,
+    "pngPath": "images/vec_96_17.png"
+  },
+  {
+    "nodeId": "96:18",
+    "nodeName": "Vector",
+    "name": "image_vec_96_18",
+    "svgPath": "vectors/96_18.svg",
+    "width": 14,
+    "height": 3,
+    "pngPath": "images/vec_96_18.png"
+  },
+  {
+    "nodeId": "96:19",
+    "nodeName": "Vector",
+    "name": "image_vec_96_19",
+    "svgPath": "vectors/96_19.svg",
+    "width": 7,
+    "height": 11,
+    "pngPath": "images/vec_96_19.png"
+  },
+  {
+    "nodeId": "96:22",
+    "nodeName": "Vector",
+    "name": "image_vec_96_22",
+    "svgPath": "vectors/96_22.svg",
+    "width": 15,
+    "height": 15,
+    "pngPath": "images/vec_96_22.png"
+  },
+  {
+    "nodeId": "96:23",
+    "nodeName": "Vector",
+    "name": "image_vec_96_23",
+    "svgPath": "vectors/96_23.svg",
+    "width": 7,
+    "height": 1,
+    "pngPath": "images/vec_96_23.png"
+  },
+  {
+    "nodeId": "96:24",
+    "nodeName": "Vector",
+    "name": "image_vec_96_24",
+    "svgPath": "vectors/96_24.svg",
+    "width": 4,
+    "height": 6,
+    "pngPath": "images/vec_96_24.png"
+  },
+  {
+    "nodeId": "182:108",
+    "nodeName": "Icon",
+    "name": "image_icon_182108",
+    "svgPath": "vectors/182_108.svg",
+    "width": 4,
+    "height": 8,
+    "aliasNodeIds": [
+      "182:213"
+    ],
+    "pngPath": "images/icon_182108.png"
+  },
+  {
+    "nodeId": "182:206",
+    "nodeName": "Icon",
+    "name": "image_icon_182206",
+    "svgPath": "vectors/182_206.svg",
+    "width": 4,
+    "height": 8,
+    "aliasNodeIds": [
+      "182:315"
+    ],
+    "pngPath": "images/icon_182206.png"
+  },
+  {
+    "nodeId": "180:18",
+    "nodeName": "Vector",
+    "name": "image_vec_180_18",
+    "svgPath": "vectors/180_18.svg",
+    "width": 24,
+    "height": 24,
+    "pngPath": "images/vec_180_18.png"
+  },
+  {
+    "nodeId": "180:19",
+    "nodeName": "Vector",
+    "name": "image_vec_180_19",
+    "svgPath": "vectors/180_19.svg",
+    "width": 47,
+    "height": 47,
+    "pngPath": "images/vec_180_19.png"
+  },
+  {
+    "nodeId": "165:22",
+    "nodeName": "ant-design:calendar-filled",
+    "name": "image_ant_design_calendar_filled",
+    "svgPath": "vectors/165_22.svg",
+    "width": 20,
+    "height": 20,
+    "aliasNodeIds": [
+      "100:77"
+    ],
+    "pngPath": "images/ant_design_calendar_filled.png"
+  }
+]

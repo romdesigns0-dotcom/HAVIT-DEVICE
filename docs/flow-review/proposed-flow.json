@@ -1,0 +1,411 @@
+{
+  "status": "partially_implemented",
+  "implemented_in_firmware": [
+    "V2 intro, pairing entry and welcome screens replace the legacy frames",
+    "Today profile opens account settings and preserves a return route",
+    "Welcome is limited to the first successful account sync in a boot session",
+    "Background sync preserves the current screen and refreshes the Today task count in place",
+    "Task list filters, paging and completion update existing widgets without rebuilding the screen",
+    "Calendar month changes and project calendar selection update existing widgets",
+    "Project date schedule goes directly to the local timeline without a simulated network loading delay"
+  ],
+  "still_unimplemented_or_service_dependent": [
+    "Remote task collection parsing and task detail",
+    "Remote project generation and save contract",
+    "Draft and route parameter persistence across editors",
+    "Task detail, field editor, duration picker and milestone editor views"
+  ],
+  "origin_semantics": "Return stack; preserve draft, selection and active quick session.",
+  "route_parameter_requirements": [
+    "origin",
+    "selected_date",
+    "task_id",
+    "project_id",
+    "draft_id",
+    "operation_id",
+    "mode"
+  ],
+  "archived_visual_sources": [
+    "frame_1",
+    "frame_2",
+    "frame_3",
+    "firmware:create_home_placeholder"
+  ],
+  "routes": [
+    {
+      "id": "boot",
+      "visual_sources": [
+        "intro_1",
+        "intro_2",
+        "intro_3",
+        "intro_5"
+      ],
+      "events": {
+        "first_setup": "onboarding",
+        "unpaired": "pair_entry",
+        "saved_account": "sync",
+        "startup_error": "startup_error"
+      }
+    },
+    {
+      "id": "onboarding",
+      "visual_sources": [
+        "intro_4"
+      ],
+      "events": {
+        "continue": "pair_entry"
+      }
+    },
+    {
+      "id": "pair_entry",
+      "visual_sources": [
+        "log_in"
+      ],
+      "events": {
+        "pair": "pairing",
+        "connections": "connections"
+      }
+    },
+    {
+      "id": "pairing",
+      "visual_sources": [
+        "firmware:create_pairing_screen"
+      ],
+      "events": {
+        "no_wifi": "connections",
+        "verified": "sync",
+        "expired_or_failed": "pairing:error",
+        "back": "pair_entry"
+      }
+    },
+    {
+      "id": "connections",
+      "visual_sources": [
+        "firmware:create_wifi_setup_screen"
+      ],
+      "events": {
+        "manual": "wifi_manual",
+        "forget": "wifi_forget_confirm",
+        "back": "$origin",
+        "connected": "$resume_pending_operation"
+      }
+    },
+    {
+      "id": "wifi_manual",
+      "visual_sources": [
+        "firmware:s_manual_wifi_view"
+      ],
+      "events": {
+        "back": "connections"
+      }
+    },
+    {
+      "id": "wifi_forget_confirm",
+      "visual_sources": [
+        "firmware:s_forget_confirm"
+      ],
+      "events": {
+        "confirm": "connections:provisioning",
+        "cancel": "connections"
+      }
+    },
+    {
+      "id": "sync",
+      "visual_sources": [],
+      "events": {
+        "initial_success": "welcome",
+        "background_success": "$current_route",
+        "offline_with_cache": "today",
+        "offline_without_cache": "startup_error",
+        "invalid_credentials": "pair_entry"
+      }
+    },
+    {
+      "id": "startup_error",
+      "visual_sources": [],
+      "events": {
+        "retry": "sync",
+        "connections": "connections"
+      }
+    },
+    {
+      "id": "welcome",
+      "visual_sources": [
+        "welcome_back"
+      ],
+      "events": {
+        "finished_or_skip": "today"
+      }
+    },
+    {
+      "id": "today",
+      "visual_sources": [
+        "today",
+        "today_c"
+      ],
+      "events": {
+        "plus": "create_menu",
+        "profile": "account_settings",
+        "task_list": "task_list",
+        "calendar_or_center": "agenda_day"
+      }
+    },
+    {
+      "id": "account_settings",
+      "visual_sources": [],
+      "events": {
+        "connections": "connections",
+        "back": "today",
+        "unlink_confirmed": "$unlink_service_then_pair_entry"
+      }
+    },
+    {
+      "id": "task_list",
+      "visual_sources": [],
+      "events": {
+        "select": "task_detail",
+        "back": "today"
+      }
+    },
+    {
+      "id": "task_detail",
+      "visual_sources": [],
+      "events": {
+        "project_plan": "project_breakdown",
+        "back": "$origin"
+      }
+    },
+    {
+      "id": "agenda_day",
+      "visual_sources": [
+        "home"
+      ],
+      "events": {
+        "week": "agenda_week",
+        "select_event": "task_detail",
+        "select_date": "date_picker",
+        "back": "today"
+      }
+    },
+    {
+      "id": "agenda_week",
+      "visual_sources": [
+        "esta_semana"
+      ],
+      "events": {
+        "day": "agenda_day",
+        "select_event": "task_detail",
+        "back": "today"
+      }
+    },
+    {
+      "id": "create_menu",
+      "visual_sources": [
+        "today_b"
+      ],
+      "events": {
+        "project": "project_identity",
+        "quick": "quick_form",
+        "close": "$origin"
+      }
+    },
+    {
+      "id": "project_identity",
+      "visual_sources": [
+        "add_task_p1"
+      ],
+      "events": {
+        "next_valid": "project_description",
+        "cancel_confirmed": "$origin",
+        "edit_field": "field_editor"
+      }
+    },
+    {
+      "id": "project_description",
+      "visual_sources": [
+        "add_task_p2"
+      ],
+      "events": {
+        "next_valid": "project_interval",
+        "back": "project_identity",
+        "edit_field": "field_editor",
+        "edit_deadline": "date_picker"
+      }
+    },
+    {
+      "id": "project_interval",
+      "visual_sources": [
+        "add_task_p3"
+      ],
+      "events": {
+        "next_valid": "project_generate_confirm",
+        "back": "project_description",
+        "edit_datetime": "date_picker"
+      }
+    },
+    {
+      "id": "project_generate_confirm",
+      "visual_sources": [
+        "add_task_p4"
+      ],
+      "events": {
+        "generate": "project_generating",
+        "back": "project_interval"
+      }
+    },
+    {
+      "id": "project_generating",
+      "visual_sources": [
+        "add_task_p5_d"
+      ],
+      "events": {
+        "service_success": "project_summary",
+        "service_failed": "project_generation_error",
+        "cancel": "project_generate_confirm"
+      }
+    },
+    {
+      "id": "project_generation_error",
+      "visual_sources": [],
+      "events": {
+        "retry": "project_generating",
+        "back": "project_generate_confirm"
+      }
+    },
+    {
+      "id": "project_summary",
+      "visual_sources": [
+        "add_task_p5_e"
+      ],
+      "events": {
+        "next": "project_calendar",
+        "back": "project_generate_confirm"
+      }
+    },
+    {
+      "id": "project_calendar",
+      "visual_sources": [
+        "add_task_p5",
+        "add_task_p5_b",
+        "add_task_p5_c"
+      ],
+      "events": {
+        "change_month": "$update_visible_month",
+        "next": "project_breakdown",
+        "back": "project_summary",
+        "select_milestone": "milestone_editor"
+      }
+    },
+    {
+      "id": "project_breakdown",
+      "visual_sources": [
+        "desglose_b"
+      ],
+      "events": {
+        "next_in_create_mode": "project_notifications",
+        "edit": "milestone_editor",
+        "back": "$origin_or_project_calendar"
+      }
+    },
+    {
+      "id": "project_notifications",
+      "visual_sources": [
+        "desglose"
+      ],
+      "events": {
+        "save": "project_saving",
+        "back": "project_breakdown",
+        "edit_preference": "preference_picker"
+      }
+    },
+    {
+      "id": "project_saving",
+      "visual_sources": [],
+      "events": {
+        "service_success": "today",
+        "service_failed": "project_save_error"
+      }
+    },
+    {
+      "id": "project_save_error",
+      "visual_sources": [],
+      "events": {
+        "retry": "project_saving",
+        "back": "project_notifications"
+      }
+    },
+    {
+      "id": "quick_form",
+      "visual_sources": [
+        "add_task_p1_b"
+      ],
+      "events": {
+        "start_valid": "quick_active",
+        "cancel": "$origin",
+        "edit_name": "field_editor",
+        "edit_duration": "duration_picker"
+      }
+    },
+    {
+      "id": "quick_active",
+      "visual_sources": [
+        "add_task_p1_c"
+      ],
+      "events": {
+        "mark_done_and_recorded": "quick_completed",
+        "timer_elapsed": "$show_time_finished",
+        "cancel_confirmed": "$origin",
+        "leave_view": "$preserve_session_and_return"
+      }
+    },
+    {
+      "id": "quick_completed",
+      "visual_sources": [
+        "add_task_p1_d"
+      ],
+      "events": {
+        "close": "$origin"
+      }
+    },
+    {
+      "id": "date_picker",
+      "visual_sources": [],
+      "events": {
+        "apply_valid": "$origin_with_updated_model",
+        "cancel": "$origin"
+      }
+    },
+    {
+      "id": "field_editor",
+      "visual_sources": [],
+      "events": {
+        "apply_valid": "$origin_with_updated_model",
+        "cancel": "$origin"
+      }
+    },
+    {
+      "id": "milestone_editor",
+      "visual_sources": [],
+      "events": {
+        "apply_valid": "$origin_with_updated_model",
+        "cancel": "$origin"
+      }
+    },
+    {
+      "id": "preference_picker",
+      "visual_sources": [],
+      "events": {
+        "apply_valid": "$origin_with_updated_model",
+        "cancel": "$origin"
+      }
+    },
+    {
+      "id": "duration_picker",
+      "visual_sources": [],
+      "events": {
+        "apply_valid": "$origin_with_updated_model",
+        "cancel": "$origin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+<globals>
+  <api>
+    <!-- Add <enumdefs> here -->
+  </api>
+
+  <consts>
+    <!-- ────────────────── <lvgl-figma-flow begin="consts"/> ───────────────────
+         Regenerated on each export. Add your own entries outside the fence. -->
+
+    <color name="const_baselib_accent_global" value="0x70609C" />
+    <color name="const_baselib_accent_text_global" value="0xFFFFFF" />
+    <int name="const_baselib_radius_global" value="8" />
+    <int name="const_baselib_unit_sm_global" value="4" />
+
+    <!-- ─────────────────── <lvgl-figma-flow end="consts"/> ──────────────────── -->
+    <!-- Add <px>, <int>, <color> etc here -->
+  </consts>
+
+  <subjects>
+    <!-- Add <int>, <string>, or <float> subjects here -->
+  </subjects>
+
+  <images>
+    <!-- ────────────────── <lvgl-figma-flow begin="images"/> ───────────────────
+         Regenerated on each export. Add your own entries outside the fence. -->
+
+    <data name="image_google_logo_1" src_path="images/google_logo_1.png" color_format="rgb565a8" />
+    <data name="image_vec_9_570" src_path="images/vec_9_570.png" color_format="rgb565a8" />
+    <data name="image_vec_9_466" src_path="images/vec_9_466.png" color_format="rgb565a8" />
+    <data name="image_vec_9_535" src_path="images/vec_9_535.png" color_format="rgb565a8" />
+    <data name="image_vec_9_540" src_path="images/vec_9_540.png" color_format="rgb565a8" />
+    <data name="image_vec_46_233" src_path="images/vec_46_233.png" color_format="rgb565a8" />
+    <data
+      name="image_ant_design_google_outlined"
+      src_path="images/ant_design_google_outlined.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_165_36" src_path="images/vec_165_36.png" color_format="rgb565a8" />
+    <data name="image_vec_165_37" src_path="images/vec_165_37.png" color_format="rgb565a8" />
+    <data name="image_vec_165_45" src_path="images/vec_165_45.png" color_format="rgb565a8" />
+    <data name="image_vec_165_46" src_path="images/vec_165_46.png" color_format="rgb565a8" />
+    <data name="image_vec_170_54" src_path="images/vec_170_54.png" color_format="rgb565a8" />
+    <data name="image_vec_170_55" src_path="images/vec_170_55.png" color_format="rgb565a8" />
+    <data name="image_vec_170_56" src_path="images/vec_170_56.png" color_format="rgb565a8" />
+    <data name="image_andrsrxn_plus" src_path="images/andrsrxn_plus.png" color_format="rgb565a8" />
+    <data
+      name="image_hugeicons_cancel_01_18077"
+      src_path="images/hugeicons_cancel_01_18077.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_hugeicons_cancel_01_199693"
+      src_path="images/hugeicons_cancel_01_199693.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_176_104" src_path="images/vec_176_104.png" color_format="rgb565a8" />
+    <data name="image_vec_176_108" src_path="images/vec_176_108.png" color_format="rgb565a8" />
+    <data
+      name="image_ic_baseline_keyboard_voice"
+      src_path="images/ic_baseline_keyboard_voice.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_akar_icons_arrow_down_176161"
+      src_path="images/akar_icons_arrow_down_176161.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_akar_icons_arrow_down_176157"
+      src_path="images/akar_icons_arrow_down_176157.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_bitcoin_icons_edit_filled_176222"
+      src_path="images/bitcoin_icons_edit_filled_176222.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_bitcoin_icons_edit_filled_182424"
+      src_path="images/bitcoin_icons_edit_filled_182424.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_197_581" src_path="images/vec_197_581.png" color_format="rgb565a8" />
+    <data name="image_vec_199_671" src_path="images/vec_199_671.png" color_format="rgb565a8" />
+    <data name="image_vec_199_672" src_path="images/vec_199_672.png" color_format="rgb565a8" />
+    <data
+      name="image_akar_icons_circle_check_fill_199677"
+      src_path="images/akar_icons_circle_check_fill_199677.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_akar_icons_circle_check_fill_190478"
+      src_path="images/akar_icons_circle_check_fill_190478.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_akar_icons_circle_check_fill_182427"
+      src_path="images/akar_icons_circle_check_fill_182427.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_190_531" src_path="images/vec_190_531.png" color_format="rgb565a8" />
+    <data name="image_vec_190_532" src_path="images/vec_190_532.png" color_format="rgb565a8" />
+    <data name="image_vec_190_537" src_path="images/vec_190_537.png" color_format="rgb565a8" />
+    <data name="image_vec_190_538" src_path="images/vec_190_538.png" color_format="rgb565a8" />
+    <data name="image_vec_190_543" src_path="images/vec_190_543.png" color_format="rgb565a8" />
+    <data name="image_vec_190_544" src_path="images/vec_190_544.png" color_format="rgb565a8" />
+    <data name="image_vec_190_545" src_path="images/vec_190_545.png" color_format="rgb565a8" />
+    <data
+      name="image_ant_design_calendar_filled_176193"
+      src_path="images/ant_design_calendar_filled_176193.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_ant_design_calendar_filled_176169"
+      src_path="images/ant_design_calendar_filled_176169.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_176_197" src_path="images/vec_176_197.png" color_format="rgb565a8" />
+    <data
+      name="image_fluent_sound_wave_circle_16_filled"
+      src_path="images/fluent_sound_wave_circle_16_filled.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_fluent_person_voice_32_filled"
+      src_path="images/fluent_person_voice_32_filled.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_lets_icons_arrow_drop_down"
+      src_path="images/lets_icons_arrow_drop_down.png"
+      color_format="rgb565a8" />
+    <data name="image_vec_176_179" src_path="images/vec_176_179.png" color_format="rgb565a8" />
+    <data name="image_vec_176_180" src_path="images/vec_176_180.png" color_format="rgb565a8" />
+    <data name="image_vec_176_187" src_path="images/vec_176_187.png" color_format="rgb565a8" />
+    <data name="image_vec_176_188" src_path="images/vec_176_188.png" color_format="rgb565a8" />
+    <data name="image_vec_96_7" src_path="images/vec_96_7.png" color_format="rgb565a8" />
+    <data name="image_vec_96_8" src_path="images/vec_96_8.png" color_format="rgb565a8" />
+    <data name="image_vec_96_9" src_path="images/vec_96_9.png" color_format="rgb565a8" />
+    <data name="image_vec_96_12" src_path="images/vec_96_12.png" color_format="rgb565a8" />
+    <data name="image_vec_96_13" src_path="images/vec_96_13.png" color_format="rgb565a8" />
+    <data name="image_vec_96_14" src_path="images/vec_96_14.png" color_format="rgb565a8" />
+    <data name="image_vec_96_17" src_path="images/vec_96_17.png" color_format="rgb565a8" />
+    <data name="image_vec_96_18" src_path="images/vec_96_18.png" color_format="rgb565a8" />
+    <data name="image_vec_96_19" src_path="images/vec_96_19.png" color_format="rgb565a8" />
+    <data name="image_vec_96_22" src_path="images/vec_96_22.png" color_format="rgb565a8" />
+    <data name="image_vec_96_23" src_path="images/vec_96_23.png" color_format="rgb565a8" />
+    <data name="image_vec_96_24" src_path="images/vec_96_24.png" color_format="rgb565a8" />
+    <data name="image_icon_182108" src_path="images/icon_182108.png" color_format="rgb565a8" />
+    <data name="image_icon_182206" src_path="images/icon_182206.png" color_format="rgb565a8" />
+    <data name="image_vec_180_18" src_path="images/vec_180_18.png" color_format="rgb565a8" />
+    <data name="image_vec_180_19" src_path="images/vec_180_19.png" color_format="rgb565a8" />
+    <data
+      name="image_ant_design_calendar_filled"
+      src_path="images/ant_design_calendar_filled.png"
+      color_format="rgb565a8" />
+
+    <!-- ─────────────────── <lvgl-figma-flow end="images"/> ──────────────────── -->
+    <data name="image_gradient_ring" src_path="images/gradient_ring.png" color_format="rgb565a8" />
+    <data
+      name="image_gradient_ring_f2"
+      src_path="images/gradient_ring_f2.png"
+      color_format="rgb565a8" />
+    <data
+      name="image_gradient_ring_f3"
+      src_path="images/gradient_ring_f3.png"
+      color_format="rgb565a8" />
+    <data name="image_continue_pill" src_path="images/continue_pill.png" color_format="rgb565a8" />
+  </images>
+
+  <fonts>
+    <!-- ─────────────────── <lvgl-figma-flow begin="fonts"/> ───────────────────
+         Regenerated on each export. Add your own entries outside the fence. -->
+
+    <bin
+      name="font_instrument_sans_regular_22"
+      size="22"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_15"
+      size="15"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_20"
+      size="20"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F" />
+    <bin
+      name="font_instrument_sans_regular_24"
+      size="24"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_12"
+      size="12"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F" />
+    <bin
+      name="font_instrument_sans_regular_16"
+      size="16"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_40"
+      size="40"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_32"
+      size="32"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F" />
+    <bin
+      name="font_instrument_sans_medium_12"
+      size="12"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Medium.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_medium_16"
+      size="16"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Medium.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_14"
+      size="14"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_medium_48"
+      size="48"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Medium.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_13"
+      size="13"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_11"
+      size="11"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_8"
+      size="8"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F" />
+    <bin
+      name="font_instrument_sans_regular_6"
+      size="6"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F" />
+    <bin
+      name="font_instrument_sans_regular_10"
+      size="10"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_7"
+      size="7"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_regular_5"
+      size="5"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_inter_bold_32"
+      size="32"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/Inter-Bold.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_inter_medium_32"
+      size="32"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/Inter-Medium.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_inter_bold_48"
+      size="48"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/Inter-Bold.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_inter_regular_20"
+      size="20"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/Inter-Regular.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_inter_semi_bold_24"
+      size="24"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/Inter-SemiBold.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_bold_24"
+      size="24"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-Bold.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+    <bin
+      name="font_instrument_sans_semibold_16"
+      size="16"
+      bpp="4"
+      as_file="true"
+      src_path="fonts/InstrumentSans-SemiBold.ttf"
+      range="0x20-0x7F, 0xA0-0xFF, 0x0100-0x017F, 0x2000-0x206F" />
+
+    <!-- ──────────────────── <lvgl-figma-flow end="fonts"/> ──────────────────── -->
+    <!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
+  </fonts>
+
+  <styles>
+    <!-- ────────────────── <lvgl-figma-flow begin="styles"/> ───────────────────
+         Regenerated on each export. Add your own entries outside the fence. -->
+
+    <style
+      name="style_screen_base_global"
+      border_width="0"
+      radius="0"
+      shadow_width="0"
+      shadow_opa="0" />
+
+    <!-- ─────────────────── <lvgl-figma-flow end="styles"/> ──────────────────── -->
+    <!-- Add <style> tags here -->
+  </styles>
+</globals>

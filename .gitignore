@@ -1,0 +1,54 @@
+# ESP-IDF generated output
+build/
+build-*/
+firmware/build/
+firmware/build-*/
+firmware/managed_components/
+firmware/.cache/
+firmware/.pytest_cache/
+firmware/sdkconfig.old
+firmware/sdkconfig.backup
+firmware/*.bin
+firmware/*.elf
+firmware/*.map
+firmware/*.flash_args
+firmware/*.flasher_args.json
+firmware/flash_project_args
+firmware/project_description.json
+firmware/CMakeFiles/
+
+# LVGL simulator and generated previews
+ui/sim/build/
+ui/sim/build-*/
+ui/preview-build/
+ui/preview-bin/
+ui/audit-render/
+firmware/previews/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+
+# Local/editor and temporary files
+.vscode/
+ui/.vscode/
+ui/.cache.json
+*.log
+*.tmp
+*.swp
+Thumbs.db
+.DS_Store
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*firebase-adminsdk*.json
+secrets/
+credentials/

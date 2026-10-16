@@ -1,0 +1,1327 @@
+{
+  "id": "176:227",
+  "name": "Add Task p4",
+  "pageName": "Wireframe Dark Dev",
+  "node": {
+    "id": "176:227",
+    "name": "Add Task p4",
+    "type": "FRAME",
+    "visible": true,
+    "locked": false,
+    "width": 360,
+    "height": 360,
+    "x": 1757,
+    "y": 2063,
+    "rotation": 0,
+    "minWidth": null,
+    "maxWidth": null,
+    "minHeight": null,
+    "maxHeight": null,
+    "layoutSizingHorizontal": "FIXED",
+    "layoutSizingVertical": "FIXED",
+    "relativeTransform": [
+      [
+        1,
+        0,
+        1757
+      ],
+      [
+        0,
+        1,
+        2063
+      ]
+    ],
+    "absoluteTransform": [
+      [
+        1,
+        0,
+        1757
+      ],
+      [
+        0,
+        1,
+        2063
+      ]
+    ],
+    "absoluteBoundingBox": {
+      "x": 1757,
+      "y": 2063,
+      "width": 360,
+      "height": 360
+    },
+    "absoluteRenderBounds": {
+      "x": 1757,
+      "y": 2063,
+      "width": 360,
+      "height": 360
+    },
+    "targetAspectRatio": null,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "fills": [
+      {
+        "type": "SOLID",
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0.20000000298023224,
+        "opacity": 0.20000000298023224,
+        "blendMode": "NORMAL"
+      }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "strokeJoin": "MITER",
+    "strokeCap": "NONE",
+    "strokeMiterLimit": 4,
+    "dashPattern": [],
+    "fillGeometry": [
+      {
+        "windingRule": "NONZERO",
+        "data": "M0 0 L360 0 L360 360 L0 360 L0 0 Z"
+      }
+    ],
+    "cornerRadius": 0,
+    "cornerSmoothing": 0,
+    "layoutMode": "NONE",
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "primaryAxisAlignItems": "MIN",
+    "counterAxisAlignItems": "MIN",
+    "counterAxisAlignContent": "AUTO",
+    "itemSpacing": 0,
+    "counterAxisSpacing": 0,
+    "layoutWrap": "NO_WRAP",
+    "primaryAxisSizingMode": "AUTO",
+    "counterAxisSizingMode": "FIXED",
+    "itemReverseZIndex": false,
+    "strokesIncludedInLayout": false,
+    "clipsContent": true,
+    "inferredAutoLayout": null,
+    "layoutGrow": 0,
+    "layoutAlign": "INHERIT",
+    "layoutPositioning": "AUTO",
+    "opacity": 1,
+    "blendMode": "PASS_THROUGH",
+    "isMask": false,
+    "maskType": "ALPHA",
+    "effects": [],
+    "devStatus": null,
+    "children": [
+      {
+        "id": "176:228",
+        "name": "Rectangle 1",
+        "type": "RECTANGLE",
+        "visible": true,
+        "locked": false,
+        "width": 360,
+        "height": 360,
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            1757
+          ],
+          [
+            0,
+            1,
+            2063
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "absoluteRenderBounds": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "targetAspectRatio": null,
+        "constraints": {
+          "horizontal": "CENTER",
+          "vertical": "CENTER"
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1,
+            "opacity": 1,
+            "blendMode": "NORMAL"
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "strokeJoin": "MITER",
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "dashPattern": [],
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M0 0 L360 0 L360 360 L0 360 L0 0 Z"
+          }
+        ],
+        "cornerRadius": 0,
+        "cornerSmoothing": 0,
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": []
+      },
+      {
+        "id": "176:229",
+        "name": "Ellipse 1",
+        "type": "ELLIPSE",
+        "visible": true,
+        "locked": false,
+        "width": 360,
+        "height": 360,
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            1757
+          ],
+          [
+            0,
+            1,
+            2063
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "absoluteRenderBounds": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "targetAspectRatio": null,
+        "constraints": {
+          "horizontal": "CENTER",
+          "vertical": "CENTER"
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.25,
+            "opacity": 0.25,
+            "blendMode": "NORMAL"
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "strokeJoin": "MITER",
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "dashPattern": [],
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M360 180 C360 279.411 279.411 360 180 360 C80.5887 360 0 279.411 0 180 C0 80.5887 80.5887 0 180 0 C279.411 0 360 80.5887 360 180 Z"
+          }
+        ],
+        "strokeGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M360 180 L359 180 C359 278.859 278.859 359 180 359 L180 360 L180 361 C279.964 361 361 279.964 361 180 L360 180 Z M180 360 L180 359 C81.141 359 1 278.859 1 180 L0 180 L-1 180 C-1 279.964 80.0365 361 180 361 L180 360 Z M0 180 L1 180 C1 81.141 81.141 1 180 1 L180 0 L180 -1 C80.0365 -1 -1 80.0365 -1 180 L0 180 Z M180 0 L180 1 C278.859 1 359 81.141 359 180 L360 180 L361 180 C361 80.0365 279.964 -1 180 -1 L180 0 Z"
+          }
+        ],
+        "cornerRadius": 0,
+        "cornerSmoothing": 0,
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": []
+      },
+      {
+        "id": "176:230",
+        "name": "Ellipse 3",
+        "type": "ELLIPSE",
+        "visible": true,
+        "locked": false,
+        "width": 350,
+        "height": 350,
+        "x": 355,
+        "y": 355,
+        "rotation": -179.99999499104388,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            -1,
+            -8.742277657347586e-8,
+            355
+          ],
+          [
+            8.742277657347586e-8,
+            -1,
+            355
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            -1,
+            -8.742277657347586e-8,
+            2112
+          ],
+          [
+            8.742277657347586e-8,
+            -1,
+            2418
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1761.9999999196036,
+          "y": 2067.999969482422,
+          "width": 350.0000000803964,
+          "height": 350.0000611155474
+        },
+        "absoluteRenderBounds": {
+          "x": 1762,
+          "y": 2068,
+          "width": 350,
+          "height": 350
+        },
+        "targetAspectRatio": null,
+        "constraints": {
+          "horizontal": "CENTER",
+          "vertical": "CENTER"
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "GRADIENT",
+            "gradientType": "GRADIENT_LINEAR",
+            "stops": [
+              {
+                "r": 0.4117647111415863,
+                "g": 0.5921568870544434,
+                "b": 0.40784314274787903,
+                "a": 1,
+                "position": 0
+              },
+              {
+                "r": 0.46666666865348816,
+                "g": 0.7176470756530762,
+                "b": 0.8588235378265381,
+                "a": 1,
+                "position": 1
+              }
+            ],
+            "gradientTransform": [
+              [
+                6.123234262925839e-17,
+                1,
+                0
+              ],
+              [
+                -1,
+                6.123234262925839e-17,
+                1
+              ]
+            ],
+            "opacity": 1,
+            "blendMode": "NORMAL"
+          }
+        ],
+        "strokeWeight": 8,
+        "strokeAlign": "INSIDE",
+        "strokeJoin": "MITER",
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "dashPattern": [],
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M350 175 C350 271.65 271.65 350 175 350 C78.3502 350 0 271.65 0 175 C0 78.3502 78.3502 0 175 0 C271.65 0 350 78.3502 350 175 Z"
+          }
+        ],
+        "strokeGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M350 175 L342 175 C342 267.232 267.232 342 175 342 L175 350 L175 358 C276.068 358 358 276.068 358 175 L350 175 Z M175 350 L175 342 C82.7684 342 8 267.232 8 175 L0 175 L-8 175 C-8 276.068 73.9319 358 175 358 L175 350 Z M0 175 L8 175 C8 82.7685 82.7684 8 175 8 L175 0 L175 -8 C73.9319 -8 -8 73.9319 -8 175 L0 175 Z M175 0 L175 8 C267.232 8 342 82.7685 342 175 L350 175 L358 175 C358 73.9319 276.068 -8 175 -8 L175 0 Z"
+          }
+        ],
+        "cornerRadius": 0,
+        "cornerSmoothing": 0,
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": []
+      },
+      {
+        "id": "176:231",
+        "name": "Ellipse 19",
+        "type": "ELLIPSE",
+        "visible": true,
+        "locked": false,
+        "width": 360,
+        "height": 360,
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            1757
+          ],
+          [
+            0,
+            1,
+            2063
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "absoluteRenderBounds": {
+          "x": 1757,
+          "y": 2063,
+          "width": 360,
+          "height": 360
+        },
+        "targetAspectRatio": null,
+        "constraints": {
+          "horizontal": "CENTER",
+          "vertical": "CENTER"
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.25,
+            "opacity": 0.25,
+            "blendMode": "NORMAL"
+          }
+        ],
+        "strokeWeight": 5,
+        "strokeAlign": "OUTSIDE",
+        "strokeJoin": "MITER",
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "dashPattern": [],
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M360 180 C360 279.411 279.411 360 180 360 C80.5887 360 0 279.411 0 180 C0 80.5887 80.5887 0 180 0 C279.411 0 360 80.5887 360 180 Z"
+          }
+        ],
+        "strokeGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M360 180 L355 180 C355 276.65 276.65 355 180 355 L180 360 L180 365 C282.173 365 365 282.173 365 180 L360 180 Z M180 360 L180 355 C83.3502 355 5 276.65 5 180 L0 180 L-5 180 C-5 282.173 77.8273 365 180 365 L180 360 Z M0 180 L5 180 C5 83.3502 83.3502 5 180 5 L180 0 L180 -5 C77.8273 -5 -5 77.8273 -5 180 L0 180 Z M180 0 L180 5 C276.65 5 355 83.3502 355 180 L360 180 L365 180 C365 77.8273 282.173 -5 180 -5 L180 0 Z"
+          }
+        ],
+        "cornerRadius": 0,
+        "cornerSmoothing": 0,
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": []
+      },
+      {
+        "id": "176:237",
+        "name": "Group 21",
+        "type": "GROUP",
+        "visible": true,
+        "locked": false,
+        "width": 36,
+        "height": 37,
+        "x": 198,
+        "y": 66,
+        "rotation": 179.99999499104388,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            -1,
+            8.742277657347586e-8,
+            198
+          ],
+          [
+            -8.742277657347586e-8,
+            -1,
+            66
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            -1,
+            8.742277657347586e-8,
+            1955
+          ],
+          [
+            -8.742277657347586e-8,
+            -1,
+            2129
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1919,
+          "y": 2091.99999685278,
+          "width": 36.00000323464269,
+          "height": 37.00000314722001
+        },
+        "absoluteRenderBounds": {
+          "x": 1919,
+          "y": 2091.99999685278,
+          "width": 36.00000323464269,
+          "height": 37.00000314722001
+        },
+        "targetAspectRatio": null,
+        "inferredAutoLayout": null,
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": [],
+        "reactions": [
+          {
+            "trigger": {
+              "type": "ON_CLICK"
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "176:200",
+                "navigation": "NAVIGATE",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "duration": 0.30000001192092896,
+                  "easing": "EASE_OUT",
+                  "easingDetail": {
+                    "type": "EASE_OUT"
+                  }
+                },
+                "resetVideoPosition": false
+              }
+            ]
+          }
+        ],
+        "children": [
+          {
+            "id": "176:238",
+            "name": "Ellipse 27",
+            "type": "ELLIPSE",
+            "visible": true,
+            "locked": false,
+            "width": 36,
+            "height": 37,
+            "x": 0,
+            "y": 0,
+            "rotation": 179.99999499104388,
+            "minWidth": null,
+            "maxWidth": null,
+            "minHeight": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "relativeTransform": [
+              [
+                -1,
+                8.742277657347586e-8,
+                0
+              ],
+              [
+                -8.742277657347586e-8,
+                -1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                -1,
+                8.742277657347586e-8,
+                1955
+              ],
+              [
+                -8.742277657347586e-8,
+                -1,
+                2129
+              ]
+            ],
+            "absoluteBoundingBox": {
+              "x": 1919,
+              "y": 2091.99999685278,
+              "width": 36.00000323464269,
+              "height": 37.00000314722001
+            },
+            "absoluteRenderBounds": {
+              "x": 1919,
+              "y": 2092,
+              "width": 36,
+              "height": 37
+            },
+            "targetAspectRatio": null,
+            "constraints": {
+              "horizontal": "SCALE",
+              "vertical": "SCALE"
+            },
+            "fills": [
+              {
+                "type": "SOLID",
+                "r": 0.8156862854957581,
+                "g": 0.8941176533699036,
+                "b": 0.7490196228027344,
+                "a": 1,
+                "opacity": 1,
+                "blendMode": "NORMAL"
+              }
+            ],
+            "strokes": [],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "dashPattern": [],
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M36 18.5 C36 28.7173 27.9411 37 18 37 C8.05887 37 0 28.7173 0 18.5 C0 8.28273 8.05887 0 18 0 C27.9411 0 36 8.28273 36 18.5 Z"
+              }
+            ],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "layoutGrow": 0,
+            "layoutAlign": "INHERIT",
+            "layoutPositioning": "AUTO",
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": []
+          },
+          {
+            "id": "176:239",
+            "name": "akar-icons:arrow-down",
+            "type": "FRAME",
+            "visible": true,
+            "locked": false,
+            "width": 33,
+            "height": 33,
+            "x": -2,
+            "y": -2,
+            "rotation": 179.99999499104388,
+            "minWidth": null,
+            "maxWidth": null,
+            "minHeight": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "relativeTransform": [
+              [
+                -1,
+                8.742277657347586e-8,
+                -2
+              ],
+              [
+                -8.742277657347586e-8,
+                -1,
+                -2
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                -1,
+                8.742277657347586e-8,
+                1953
+              ],
+              [
+                -8.742277657347586e-8,
+                -1,
+                2127
+              ]
+            ],
+            "absoluteBoundingBox": {
+              "x": 1920,
+              "y": 2093.9999971150482,
+              "width": 33.00000288495153,
+              "height": 33.000002884951755
+            },
+            "absoluteRenderBounds": {
+              "x": 1920,
+              "y": 2093.9999971150482,
+              "width": 33.00000288495153,
+              "height": 33.000002884951755
+            },
+            "targetAspectRatio": {
+              "x": 24,
+              "y": 24
+            },
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "fills": [],
+            "strokes": [],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "dashPattern": [],
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L33 0 L33 33 L0 33 L0 0 Z"
+              }
+            ],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "layoutMode": "NONE",
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "primaryAxisAlignItems": "MIN",
+            "counterAxisAlignItems": "MIN",
+            "counterAxisAlignContent": "AUTO",
+            "itemSpacing": 0,
+            "counterAxisSpacing": 0,
+            "layoutWrap": "NO_WRAP",
+            "primaryAxisSizingMode": "AUTO",
+            "counterAxisSizingMode": "FIXED",
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "clipsContent": true,
+            "inferredAutoLayout": {
+              "layoutMode": "HORIZONTAL",
+              "paddingLeft": 6.875,
+              "paddingRight": 6.875,
+              "paddingTop": 5.5,
+              "paddingBottom": 5.5,
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "FIXED",
+              "itemSpacing": 0
+            },
+            "layoutGrow": 0,
+            "layoutAlign": "INHERIT",
+            "layoutPositioning": "AUTO",
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "devStatus": null,
+            "children": [
+              {
+                "id": "176:240",
+                "name": "Vector",
+                "type": "VECTOR",
+                "visible": true,
+                "locked": false,
+                "width": 19,
+                "height": 22,
+                "x": 7,
+                "y": 6,
+                "rotation": 0,
+                "minWidth": null,
+                "maxWidth": null,
+                "minHeight": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    7
+                  ],
+                  [
+                    0,
+                    1,
+                    6
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    -1,
+                    8.742277657347586e-8,
+                    1946.125
+                  ],
+                  [
+                    -8.742277657347586e-8,
+                    -1,
+                    2121.5
+                  ]
+                ],
+                "absoluteBoundingBox": {
+                  "x": 1926.875,
+                  "y": 2099.4999983171115,
+                  "width": 19.25000192330117,
+                  "height": 22.000001682888524
+                },
+                "absoluteRenderBounds": {
+                  "x": 1925.875,
+                  "y": 2098.5,
+                  "width": 21.25,
+                  "height": 24
+                },
+                "targetAspectRatio": null,
+                "constraints": {
+                  "horizontal": "SCALE",
+                  "vertical": "SCALE"
+                },
+                "fills": [],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1,
+                    "opacity": 1,
+                    "blendMode": "NORMAL"
+                  }
+                ],
+                "strokeWeight": 2,
+                "strokeAlign": "CENTER",
+                "strokeJoin": "ROUND",
+                "strokeCap": "ROUND",
+                "strokeMiterLimit": 4,
+                "dashPattern": [],
+                "strokeGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M9.625 22 L8.91789 22.7071 C9.30842 23.0976 9.94158 23.0976 10.3321 22.7071 L9.625 22 Z M10.625 0 C10.625 -0.552285 10.1773 -1 9.625 -1 C9.07271 -1 8.625 -0.552285 8.625 0 L9.625 0 L10.625 0 Z M0.707107 11.6679 C0.316583 11.2774 -0.316583 11.2774 -0.707107 11.6679 C-1.09763 12.0584 -1.09763 12.6916 -0.707107 13.0821 L0 12.375 L0.707107 11.6679 Z M19.9571 13.0821 C20.3476 12.6916 20.3476 12.0584 19.9571 11.6679 C19.5666 11.2774 18.9334 11.2774 18.5429 11.6679 L19.25 12.375 L19.9571 13.0821 Z M9.625 22 L10.625 22 L10.625 0 L9.625 0 L8.625 0 L8.625 22 L9.625 22 Z M0 12.375 L-0.707107 13.0821 L8.91789 22.7071 L9.625 22 L10.3321 21.2929 L0.707107 11.6679 L0 12.375 Z M9.625 22 L10.3321 22.7071 L19.9571 13.0821 L19.25 12.375 L18.5429 11.6679 L8.91789 21.2929 L9.625 22 Z"
+                  }
+                ],
+                "cornerRadius": 0,
+                "cornerSmoothing": 0,
+                "layoutGrow": 0,
+                "layoutAlign": "INHERIT",
+                "layoutPositioning": "AUTO",
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "vectorPaths": [
+                  {
+                    "windingRule": "NONE",
+                    "data": "M 9.625 22 L 9.625 0 M 9.625 22 L 0 12.375 M 9.625 22 L 19.25 12.375"
+                  }
+                ],
+                "vectorNetwork": {
+                  "vertices": [
+                    {
+                      "x": 9.625,
+                      "y": 22,
+                      "strokeCap": "ROUND",
+                      "strokeJoin": "ROUND",
+                      "cornerRadius": 0,
+                      "handleMirroring": "NONE"
+                    },
+                    {
+                      "x": 9.625,
+                      "y": 0,
+                      "strokeCap": "ROUND",
+                      "strokeJoin": "ROUND",
+                      "cornerRadius": 0,
+                      "handleMirroring": "NONE"
+                    },
+                    {
+                      "x": 0,
+                      "y": 12.375,
+                      "strokeCap": "ROUND",
+                      "strokeJoin": "ROUND",
+                      "cornerRadius": 0,
+                      "handleMirroring": "NONE"
+                    },
+                    {
+                      "x": 19.25,
+                      "y": 12.375,
+                      "strokeCap": "ROUND",
+                      "strokeJoin": "ROUND",
+                      "cornerRadius": 0,
+                      "handleMirroring": "NONE"
+                    }
+                  ],
+                  "segments": [
+                    {
+                      "start": 0,
+                      "end": 1,
+                      "tangentStart": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "tangentEnd": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "start": 2,
+                      "end": 0,
+                      "tangentStart": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "tangentEnd": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "start": 0,
+                      "end": 3,
+                      "tangentStart": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "tangentEnd": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ],
+                  "regions": []
+                },
+                "handleMirroring": "NONE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "180:15",
+        "name": "Group 26",
+        "type": "GROUP",
+        "visible": true,
+        "locked": false,
+        "width": 246,
+        "height": 76,
+        "x": 57,
+        "y": 142,
+        "rotation": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            57
+          ],
+          [
+            0,
+            1,
+            142
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            1814
+          ],
+          [
+            0,
+            1,
+            2205
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1814,
+          "y": 2205,
+          "width": 246,
+          "height": 76
+        },
+        "absoluteRenderBounds": {
+          "x": 1814,
+          "y": 2205,
+          "width": 246,
+          "height": 76
+        },
+        "targetAspectRatio": null,
+        "inferredAutoLayout": {
+          "layoutMode": "HORIZONTAL",
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "primaryAxisSizingMode": "FIXED",
+          "counterAxisSizingMode": "FIXED",
+          "itemSpacing": 0
+        },
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": [],
+        "reactions": [
+          {
+            "trigger": {
+              "type": "ON_CLICK"
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "179:3",
+                "navigation": "NAVIGATE",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "duration": 0.30000001192092896,
+                  "easing": "EASE_OUT",
+                  "easingDetail": {
+                    "type": "EASE_OUT"
+                  }
+                },
+                "resetVideoPosition": false
+              }
+            ]
+          }
+        ],
+        "children": [
+          {
+            "id": "176:266",
+            "name": "Rectangle 15",
+            "type": "RECTANGLE",
+            "visible": true,
+            "locked": false,
+            "width": 246,
+            "height": 76,
+            "x": 0,
+            "y": 0,
+            "rotation": 0,
+            "minWidth": null,
+            "maxWidth": null,
+            "minHeight": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "relativeTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                1814
+              ],
+              [
+                0,
+                1,
+                2205
+              ]
+            ],
+            "absoluteBoundingBox": {
+              "x": 1814,
+              "y": 2205,
+              "width": 246,
+              "height": 76
+            },
+            "absoluteRenderBounds": {
+              "x": 1814,
+              "y": 2205,
+              "width": 246,
+              "height": 76
+            },
+            "targetAspectRatio": null,
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "fills": [
+              {
+                "type": "SOLID",
+                "r": 0.45098039507865906,
+                "g": 0.5921568870544434,
+                "b": 0.6039215922355652,
+                "a": 1,
+                "opacity": 1,
+                "blendMode": "NORMAL"
+              }
+            ],
+            "strokes": [],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "dashPattern": [],
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 38 C0 17.0132 17.0132 0 38 0 L208 0 C228.987 0 246 17.0132 246 38 L246 38 C246 58.9868 228.987 76 208 76 L38 76 C17.0132 76 0 58.9868 0 38 L0 38 Z"
+              }
+            ],
+            "cornerRadius": 63,
+            "cornerSmoothing": 0,
+            "layoutGrow": 0,
+            "layoutAlign": "INHERIT",
+            "layoutPositioning": "AUTO",
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "179:2",
+        "name": "Generar fechas de entrega",
+        "type": "TEXT",
+        "visible": true,
+        "locked": false,
+        "width": 197,
+        "height": 28,
+        "x": 82,
+        "y": 166,
+        "rotation": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            82
+          ],
+          [
+            0,
+            1,
+            166
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            1839
+          ],
+          [
+            0,
+            1,
+            2229
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1839,
+          "y": 2229,
+          "width": 197,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 1839.68798828125,
+          "y": 2237.320068359375,
+          "width": 195.1988525390625,
+          "height": 15.119873046875
+        },
+        "targetAspectRatio": null,
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1,
+            "opacity": 1,
+            "blendMode": "NORMAL"
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "strokeJoin": "MITER",
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "dashPattern": [],
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M6.544 20.16 C5.33867 20.16 4.29867 19.92 3.424 19.44 C2.54933 18.9493 1.872 18.2667 1.392 17.392 C0.922667 16.5173 0.688 15.488 0.688 14.304 C0.688 13.1307 0.922667 12.096 1.392 11.2 C1.872 10.2933 2.53333 9.58933 3.376 9.088 C4.21867 8.576 5.18933 8.32 6.288 8.32 C7.16267 8.32 7.952 8.48533 8.656 8.816 C9.37067 9.136 9.952 9.584 10.4 10.16 C10.8587 10.736 11.1307 11.4027 11.216 12.16 L9.52 12.16 C9.41333 11.424 9.072 10.8427 8.496 10.416 C7.92 9.97867 7.2 9.76 6.336 9.76 C5.54667 9.76 4.85867 9.94667 4.272 10.32 C3.68533 10.6933 3.22667 11.216 2.896 11.888 C2.576 12.56 2.416 13.3547 2.416 14.272 C2.416 15.2 2.58133 16 2.912 16.672 C3.24267 17.3333 3.72267 17.8453 4.352 18.208 C4.992 18.56 5.76 18.736 6.656 18.736 C7.296 18.736 7.86133 18.6453 8.352 18.464 C8.84267 18.2827 9.26933 18.016 9.632 17.664 L11.28 18.288 C10.6827 18.9067 9.99467 19.376 9.216 19.696 C8.43733 20.0053 7.54667 20.16 6.544 20.16 Z M9.584 18.288 L9.584 14.752 L10.08 15.248 L6.64 15.248 L6.64 13.84 L11.28 13.84 L11.28 18.288 L9.584 18.288 Z M16.9224 20.16 C16.101 20.16 15.3757 19.9787 14.7464 19.616 C14.1277 19.2533 13.6424 18.752 13.2904 18.112 C12.9384 17.472 12.7624 16.736 12.7624 15.904 C12.7624 15.0613 12.933 14.3253 13.2744 13.696 C13.6264 13.056 14.117 12.56 14.7464 12.208 C15.3757 11.856 16.0957 11.68 16.9064 11.68 C17.6957 11.68 18.3784 11.8507 18.9544 12.192 C19.541 12.5227 19.989 12.9867 20.2984 13.584 C20.6184 14.1813 20.7784 14.8907 20.7784 15.712 C20.7784 15.84 20.773 15.9627 20.7624 16.08 C20.7624 16.1867 20.7517 16.2987 20.7304 16.416 L13.8824 16.416 L13.8824 15.168 L19.5624 15.168 L19.1464 15.664 C19.1464 14.7893 18.949 14.1227 18.5544 13.664 C18.1597 13.2053 17.6104 12.976 16.9064 12.976 C16.149 12.976 15.5464 13.2373 15.0984 13.76 C14.661 14.272 14.4424 14.9867 14.4424 15.904 C14.4424 16.832 14.661 17.5573 15.0984 18.08 C15.5464 18.6027 16.165 18.864 16.9544 18.864 C17.4344 18.864 17.8504 18.768 18.2024 18.576 C18.5544 18.3733 18.8157 18.08 18.9864 17.696 L20.5544 17.696 C20.2877 18.464 19.8344 19.0667 19.1944 19.504 C18.565 19.9413 17.8077 20.16 16.9224 20.16 Z M22.4805 20 L22.4805 11.84 L24.0645 11.84 L24.0645 13.76 L24.1445 13.76 L24.1445 20 L22.4805 20 Z M28.2725 20 L28.2725 14.752 C28.2725 14.1867 28.1285 13.7653 27.8405 13.488 C27.5632 13.2107 27.1472 13.072 26.5925 13.072 C26.1125 13.072 25.6858 13.1787 25.3125 13.392 C24.9498 13.6053 24.6618 13.8987 24.4485 14.272 C24.2458 14.6453 24.1445 15.088 24.1445 15.6 L23.9365 13.648 C24.2032 13.04 24.6138 12.56 25.1685 12.208 C25.7232 11.856 26.3685 11.68 27.1045 11.68 C27.9792 11.68 28.6672 11.9253 29.1685 12.416 C29.6698 12.9067 29.9205 13.5573 29.9205 14.368 L29.9205 20 L28.2725 20 Z M35.7036 20.16 C34.8823 20.16 34.157 19.9787 33.5276 19.616 C32.909 19.2533 32.4236 18.752 32.0716 18.112 C31.7196 17.472 31.5436 16.736 31.5436 15.904 C31.5436 15.0613 31.7143 14.3253 32.0556 13.696 C32.4076 13.056 32.8983 12.56 33.5276 12.208 C34.157 11.856 34.877 11.68 35.6876 11.68 C36.477 11.68 37.1596 11.8507 37.7356 12.192 C38.3223 12.5227 38.7703 12.9867 39.0796 13.584 C39.3996 14.1813 39.5596 14.8907 39.5596 15.712 C39.5596 15.84 39.5543 15.9627 39.5436 16.08 C39.5436 16.1867 39.533 16.2987 39.5116 16.416 L32.6636 16.416 L32.6636 15.168 L38.3436 15.168 L37.9276 15.664 C37.9276 14.7893 37.7303 14.1227 37.3356 13.664 C36.941 13.2053 36.3916 12.976 35.6876 12.976 C34.9303 12.976 34.3276 13.2373 33.8796 13.76 C33.4423 14.272 33.2236 14.9867 33.2236 15.904 C33.2236 16.832 33.4423 17.5573 33.8796 18.08 C34.3276 18.6027 34.9463 18.864 35.7356 18.864 C36.2156 18.864 36.6316 18.768 36.9836 18.576 C37.3356 18.3733 37.597 18.08 37.7676 17.696 L39.3356 17.696 C39.069 18.464 38.6156 19.0667 37.9756 19.504 C37.3463 19.9413 36.589 20.16 35.7036 20.16 Z M41.2617 20 L41.2617 11.84 L42.8457 11.84 L42.8457 13.872 L42.9258 13.872 L42.9258 20 L41.2617 20 Z M42.9258 15.744 L42.7178 13.808 C42.9098 13.1147 43.2404 12.5867 43.7098 12.224 C44.1791 11.8613 44.7391 11.68 45.3898 11.68 C45.6351 11.68 45.8058 11.7013 45.9017 11.744 L45.9017 13.312 C45.8484 13.2907 45.7738 13.28 45.6777 13.28 C45.5817 13.2693 45.4644 13.264 45.3258 13.264 C44.5257 13.264 43.9231 13.472 43.5177 13.888 C43.1231 14.304 42.9258 14.9227 42.9258 15.744 Z M52.1927 20 C52.1394 19.7973 52.1021 19.5733 52.0807 19.328 C52.0701 19.0827 52.0648 18.784 52.0648 18.432 L51.9847 18.432 L51.9847 14.544 C51.9847 14.0213 51.8514 13.632 51.5848 13.376 C51.3288 13.1093 50.9181 12.976 50.3527 12.976 C49.8088 12.976 49.3714 13.0827 49.0407 13.296 C48.7207 13.5093 48.5341 13.8133 48.4808 14.208 L46.8968 14.208 C46.9714 13.44 47.3181 12.8267 47.9367 12.368 C48.5554 11.9093 49.3821 11.68 50.4168 11.68 C51.4834 11.68 52.2834 11.9307 52.8167 12.432 C53.3501 12.9227 53.6167 13.648 53.6167 14.608 L53.6167 18.432 C53.6167 18.6773 53.6328 18.928 53.6647 19.184 C53.6968 19.44 53.7448 19.712 53.8088 20 L52.1927 20 Z M49.3768 20.16 C48.5448 20.16 47.8834 19.9573 47.3927 19.552 C46.9021 19.136 46.6567 18.576 46.6567 17.872 C46.6567 17.1467 46.9128 16.576 47.4248 16.16 C47.9474 15.7333 48.6941 15.4453 49.6647 15.296 L52.3527 14.864 L52.3527 16.032 L49.9207 16.416 C49.3768 16.5013 48.9661 16.6453 48.6888 16.848 C48.4221 17.0507 48.2887 17.344 48.2887 17.728 C48.2887 18.1013 48.4114 18.384 48.6567 18.576 C48.9128 18.7573 49.2808 18.848 49.7607 18.848 C50.4007 18.848 50.9287 18.6933 51.3447 18.384 C51.7714 18.0747 51.9847 17.6853 51.9847 17.216 L52.1927 18.4 C52.0008 18.9653 51.6594 19.4027 51.1688 19.712 C50.6781 20.0107 50.0807 20.16 49.3768 20.16 Z M55.8711 20 L55.8711 11.84 L57.4551 11.84 L57.4551 13.872 L57.5351 13.872 L57.5351 20 L55.8711 20 Z M57.5351 15.744 L57.3271 13.808 C57.5191 13.1147 57.8498 12.5867 58.3191 12.224 C58.7885 11.8613 59.3485 11.68 59.9991 11.68 C60.2445 11.68 60.4151 11.7013 60.5111 11.744 L60.5111 13.312 C60.4578 13.2907 60.3831 13.28 60.2871 13.28 C60.1911 13.2693 60.0738 13.264 59.9351 13.264 C59.1351 13.264 58.5325 13.472 58.1271 13.888 C57.7325 14.304 57.5351 14.9227 57.5351 15.744 Z M65.8084 20 L65.8084 10.896 C65.8084 10.064 66.043 9.42933 66.5124 8.992 C66.9817 8.544 67.6857 8.32 68.6244 8.32 C68.8377 8.32 69.0137 8.33067 69.1524 8.352 C69.291 8.37333 69.4137 8.40533 69.5204 8.448 L69.5204 9.728 C69.4457 9.70667 69.3444 9.68533 69.2164 9.664 C69.099 9.64267 68.9657 9.632 68.8164 9.632 C68.347 9.632 68.0057 9.74933 67.7924 9.984 C67.579 10.208 67.4724 10.528 67.4724 10.944 L67.4724 20 L65.8084 20 Z M64.2404 13.168 L64.2404 11.84 L69.3444 11.84 L69.3444 13.168 L64.2404 13.168 Z M74.1411 20.16 C73.3198 20.16 72.5945 19.9787 71.9651 19.616 C71.3465 19.2533 70.8611 18.752 70.5091 18.112 C70.1571 17.472 69.9811 16.736 69.9811 15.904 C69.9811 15.0613 70.1518 14.3253 70.4931 13.696 C70.8451 13.056 71.3358 12.56 71.9651 12.208 C72.5945 11.856 73.3145 11.68 74.1251 11.68 C74.9145 11.68 75.5971 11.8507 76.1731 12.192 C76.7598 12.5227 77.2078 12.9867 77.5171 13.584 C77.8371 14.1813 77.9971 14.8907 77.9971 15.712 C77.9971 15.84 77.9918 15.9627 77.9811 16.08 C77.9811 16.1867 77.9705 16.2987 77.9491 16.416 L71.1011 16.416 L71.1011 15.168 L76.7811 15.168 L76.3651 15.664 C76.3651 14.7893 76.1678 14.1227 75.7731 13.664 C75.3785 13.2053 74.8291 12.976 74.1251 12.976 C73.3678 12.976 72.7651 13.2373 72.3171 13.76 C71.8798 14.272 71.6611 14.9867 71.6611 15.904 C71.6611 16.832 71.8798 17.5573 72.3171 18.08 C72.7651 18.6027 73.3838 18.864 74.1731 18.864 C74.6531 18.864 75.0691 18.768 75.4211 18.576 C75.7731 18.3733 76.0345 18.08 76.2051 17.696 L77.7731 17.696 C77.5065 18.464 77.0531 19.0667 76.4131 19.504 C75.7838 19.9413 75.0265 20.16 74.1411 20.16 Z M83.1381 20.16 C82.3595 20.16 81.6661 19.9787 81.0581 19.616 C80.4501 19.2427 79.9701 18.736 79.6181 18.096 C79.2768 17.456 79.1061 16.7253 79.1061 15.904 C79.1061 15.0827 79.2768 14.3573 79.6181 13.728 C79.9701 13.088 80.4501 12.5867 81.0581 12.224 C81.6661 11.8613 82.3541 11.68 83.1221 11.68 C83.7728 11.68 84.3541 11.8027 84.8661 12.048 C85.3781 12.2933 85.7995 12.6347 86.1301 13.072 C86.4608 13.5093 86.6741 14.0267 86.7701 14.624 L85.2021 14.624 C85.0955 14.144 84.8608 13.76 84.4981 13.472 C84.1461 13.184 83.6981 13.04 83.1541 13.04 C82.6848 13.04 82.2741 13.1573 81.9221 13.392 C81.5701 13.6267 81.2981 13.9573 81.1061 14.384 C80.9141 14.8107 80.8181 15.3173 80.8181 15.904 C80.8181 16.48 80.9141 16.9867 81.1061 17.424 C81.2981 17.8613 81.5701 18.2027 81.9221 18.448 C82.2741 18.6827 82.6901 18.8 83.1701 18.8 C83.6928 18.8 84.1355 18.6613 84.4981 18.384 C84.8715 18.096 85.1115 17.712 85.2181 17.232 L86.7861 17.232 C86.6795 17.8187 86.4555 18.3307 86.1141 18.768 C85.7835 19.2053 85.3621 19.5467 84.8501 19.792 C84.3381 20.0373 83.7675 20.16 83.1381 20.16 Z M88.4336 20 L88.4336 8.48 L90.0976 8.48 L90.0976 20 L88.4336 20 Z M94.2256 20 L94.2256 14.752 C94.2256 14.1867 94.0816 13.7653 93.7936 13.488 C93.5163 13.2107 93.1003 13.072 92.5456 13.072 C92.0656 13.072 91.639 13.1787 91.2656 13.392 C90.903 13.6053 90.615 13.8987 90.4016 14.272 C90.199 14.6453 90.0976 15.088 90.0976 15.6 L89.8896 13.648 C90.1563 13.04 90.567 12.56 91.1216 12.208 C91.6763 11.856 92.3216 11.68 93.0576 11.68 C93.9323 11.68 94.6203 11.9253 95.1216 12.416 C95.623 12.9067 95.8736 13.5573 95.8736 14.368 L95.8736 20 L94.2256 20 Z M103.099 20 C103.046 19.7973 103.008 19.5733 102.987 19.328 C102.976 19.0827 102.971 18.784 102.971 18.432 L102.891 18.432 L102.891 14.544 C102.891 14.0213 102.758 13.632 102.491 13.376 C102.235 13.1093 101.824 12.976 101.259 12.976 C100.715 12.976 100.278 13.0827 99.947 13.296 C99.627 13.5093 99.4403 13.8133 99.387 14.208 L97.803 14.208 C97.8777 13.44 98.2243 12.8267 98.843 12.368 C99.4617 11.9093 100.288 11.68 101.323 11.68 C102.39 11.68 103.19 11.9307 103.723 12.432 C104.256 12.9227 104.523 13.648 104.523 14.608 L104.523 18.432 C104.523 18.6773 104.539 18.928 104.571 19.184 C104.603 19.44 104.651 19.712 104.715 20 L103.099 20 Z M100.283 20.16 C99.451 20.16 98.7897 19.9573 98.299 19.552 C97.8083 19.136 97.563 18.576 97.563 17.872 C97.563 17.1467 97.819 16.576 98.331 16.16 C98.8537 15.7333 99.6003 15.4453 100.571 15.296 L103.259 14.864 L103.259 16.032 L100.827 16.416 C100.283 16.5013 99.8723 16.6453 99.595 16.848 C99.3283 17.0507 99.195 17.344 99.195 17.728 C99.195 18.1013 99.3177 18.384 99.563 18.576 C99.819 18.7573 100.187 18.848 100.667 18.848 C101.307 18.848 101.835 18.6933 102.251 18.384 C102.678 18.0747 102.891 17.6853 102.891 17.216 L103.099 18.4 C102.907 18.9653 102.566 19.4027 102.075 19.712 C101.584 20.0107 100.987 20.16 100.283 20.16 Z M109.628 20.16 C108.561 20.16 107.713 19.9253 107.084 19.456 C106.454 18.9867 106.097 18.3253 106.012 17.472 L107.548 17.472 C107.622 17.9413 107.836 18.304 108.188 18.56 C108.55 18.8053 109.041 18.928 109.66 18.928 C110.204 18.928 110.62 18.832 110.908 18.64 C111.196 18.448 111.34 18.176 111.34 17.824 C111.34 17.568 111.254 17.3547 111.084 17.184 C110.924 17.0027 110.604 16.8533 110.124 16.736 L108.812 16.432 C107.99 16.2293 107.377 15.9307 106.972 15.536 C106.577 15.1307 106.38 14.6347 106.38 14.048 C106.38 13.312 106.652 12.736 107.196 12.32 C107.75 11.8933 108.508 11.68 109.468 11.68 C110.417 11.68 111.18 11.8933 111.756 12.32 C112.342 12.7467 112.673 13.344 112.748 14.112 L111.212 14.112 C111.148 13.728 110.961 13.4347 110.652 13.232 C110.353 13.0187 109.942 12.912 109.42 12.912 C108.929 12.912 108.55 13.0027 108.284 13.184 C108.028 13.3547 107.9 13.5947 107.9 13.904 C107.9 14.16 107.996 14.3733 108.188 14.544 C108.39 14.7147 108.721 14.8587 109.18 14.976 L110.524 15.312 C111.302 15.504 111.889 15.8187 112.284 16.256 C112.678 16.6827 112.876 17.2 112.876 17.808 C112.876 18.544 112.588 19.12 112.012 19.536 C111.446 19.952 110.652 20.16 109.628 20.16 Z M123.462 20 L123.462 18.128 L123.622 18.176 C123.452 18.784 123.1 19.2693 122.566 19.632 C122.033 19.984 121.393 20.16 120.646 20.16 C119.91 20.16 119.265 19.984 118.71 19.632 C118.166 19.28 117.74 18.7893 117.43 18.16 C117.132 17.5307 116.982 16.7947 116.982 15.952 C116.982 15.0987 117.137 14.352 117.446 13.712 C117.756 13.072 118.188 12.576 118.742 12.224 C119.297 11.872 119.948 11.696 120.694 11.696 C121.473 11.696 122.113 11.8827 122.614 12.256 C123.126 12.6187 123.462 13.1307 123.622 13.792 L123.398 13.824 L123.398 8.48 L125.046 8.48 L125.046 20 L123.462 20 Z M121.062 18.768 C121.798 18.768 122.38 18.5173 122.806 18.016 C123.233 17.504 123.446 16.8 123.446 15.904 C123.446 15.0293 123.228 14.3413 122.79 13.84 C122.364 13.328 121.782 13.072 121.046 13.072 C120.321 13.072 119.745 13.328 119.318 13.84 C118.902 14.3413 118.694 15.0453 118.694 15.952 C118.694 16.8373 118.902 17.5307 119.318 18.032 C119.745 18.5227 120.326 18.768 121.062 18.768 Z M130.907 20.16 C130.085 20.16 129.36 19.9787 128.731 19.616 C128.112 19.2533 127.627 18.752 127.275 18.112 C126.923 17.472 126.747 16.736 126.747 15.904 C126.747 15.0613 126.917 14.3253 127.259 13.696 C127.611 13.056 128.101 12.56 128.731 12.208 C129.36 11.856 130.08 11.68 130.891 11.68 C131.68 11.68 132.363 11.8507 132.939 12.192 C133.525 12.5227 133.973 12.9867 134.283 13.584 C134.603 14.1813 134.763 14.8907 134.763 15.712 C134.763 15.84 134.757 15.9627 134.747 16.08 C134.747 16.1867 134.736 16.2987 134.715 16.416 L127.867 16.416 L127.867 15.168 L133.547 15.168 L133.131 15.664 C133.131 14.7893 132.933 14.1227 132.539 13.664 C132.144 13.2053 131.595 12.976 130.891 12.976 C130.133 12.976 129.531 13.2373 129.083 13.76 C128.645 14.272 128.427 14.9867 128.427 15.904 C128.427 16.832 128.645 17.5573 129.083 18.08 C129.531 18.6027 130.149 18.864 130.939 18.864 C131.419 18.864 131.835 18.768 132.187 18.576 C132.539 18.3733 132.8 18.08 132.971 17.696 L134.539 17.696 C134.272 18.464 133.819 19.0667 133.179 19.504 C132.549 19.9413 131.792 20.16 130.907 20.16 Z M143.141 20.16 C142.32 20.16 141.594 19.9787 140.965 19.616 C140.346 19.2533 139.861 18.752 139.509 18.112 C139.157 17.472 138.981 16.736 138.981 15.904 C138.981 15.0613 139.152 14.3253 139.493 13.696 C139.845 13.056 140.336 12.56 140.965 12.208 C141.594 11.856 142.314 11.68 143.125 11.68 C143.914 11.68 144.597 11.8507 145.173 12.192 C145.76 12.5227 146.208 12.9867 146.517 13.584 C146.837 14.1813 146.997 14.8907 146.997 15.712 C146.997 15.84 146.992 15.9627 146.981 16.08 C146.981 16.1867 146.97 16.2987 146.949 16.416 L140.101 16.416 L140.101 15.168 L145.781 15.168 L145.365 15.664 C145.365 14.7893 145.168 14.1227 144.773 13.664 C144.378 13.2053 143.829 12.976 143.125 12.976 C142.368 12.976 141.765 13.2373 141.317 13.76 C140.88 14.272 140.661 14.9867 140.661 15.904 C140.661 16.832 140.88 17.5573 141.317 18.08 C141.765 18.6027 142.384 18.864 143.173 18.864 C143.653 18.864 144.069 18.768 144.421 18.576 C144.773 18.3733 145.034 18.08 145.205 17.696 L146.773 17.696 C146.506 18.464 146.053 19.0667 145.413 19.504 C144.784 19.9413 144.026 20.16 143.141 20.16 Z M148.699 20 L148.699 11.84 L150.283 11.84 L150.283 13.76 L150.363 13.76 L150.363 20 L148.699 20 Z M154.491 20 L154.491 14.752 C154.491 14.1867 154.347 13.7653 154.059 13.488 C153.782 13.2107 153.366 13.072 152.811 13.072 C152.331 13.072 151.905 13.1787 151.531 13.392 C151.169 13.6053 150.881 13.8987 150.667 14.272 C150.465 14.6453 150.363 15.088 150.363 15.6 L150.155 13.648 C150.422 13.04 150.833 12.56 151.387 12.208 C151.942 11.856 152.587 11.68 153.323 11.68 C154.198 11.68 154.886 11.9253 155.387 12.416 C155.889 12.9067 156.139 13.5573 156.139 14.368 L156.139 20 L154.491 20 Z M161.609 20.16 C160.659 20.16 159.961 19.9413 159.513 19.504 C159.075 19.056 158.857 18.4 158.857 17.536 L158.857 9.968 L160.505 9.344 L160.505 17.552 C160.505 17.9787 160.617 18.2933 160.841 18.496 C161.065 18.6987 161.427 18.8 161.929 18.8 C162.121 18.8 162.291 18.784 162.441 18.752 C162.59 18.72 162.718 18.6827 162.825 18.64 L162.825 19.984 C162.707 20.0373 162.542 20.08 162.329 20.112 C162.115 20.144 161.875 20.16 161.609 20.16 Z M157.225 13.168 L157.225 11.84 L162.825 11.84 L162.825 13.168 L157.225 13.168 Z M164.402 20 L164.402 11.84 L165.986 11.84 L165.986 13.872 L166.066 13.872 L166.066 20 L164.402 20 Z M166.066 15.744 L165.858 13.808 C166.05 13.1147 166.381 12.5867 166.85 12.224 C167.32 11.8613 167.88 11.68 168.53 11.68 C168.776 11.68 168.946 11.7013 169.042 11.744 L169.042 13.312 C168.989 13.2907 168.914 13.28 168.818 13.28 C168.722 13.2693 168.605 13.264 168.466 13.264 C167.666 13.264 167.064 13.472 166.658 13.888 C166.264 14.304 166.066 14.9227 166.066 15.744 Z M173.813 20.16 C172.992 20.16 172.266 19.9787 171.637 19.616 C171.018 19.2533 170.533 18.752 170.181 18.112 C169.829 17.472 169.653 16.736 169.653 15.904 C169.653 15.0613 169.824 14.3253 170.165 13.696 C170.517 13.056 171.008 12.56 171.637 12.208 C172.266 11.856 172.986 11.68 173.797 11.68 C174.586 11.68 175.269 11.8507 175.845 12.192 C176.432 12.5227 176.88 12.9867 177.189 13.584 C177.509 14.1813 177.669 14.8907 177.669 15.712 C177.669 15.84 177.664 15.9627 177.653 16.08 C177.653 16.1867 177.642 16.2987 177.621 16.416 L170.773 16.416 L170.773 15.168 L176.453 15.168 L176.037 15.664 C176.037 14.7893 175.84 14.1227 175.445 13.664 C175.05 13.2053 174.501 12.976 173.797 12.976 C173.04 12.976 172.437 13.2373 171.989 13.76 C171.552 14.272 171.333 14.9867 171.333 15.904 C171.333 16.832 171.552 17.5573 171.989 18.08 C172.437 18.6027 173.056 18.864 173.845 18.864 C174.325 18.864 174.741 18.768 175.093 18.576 C175.445 18.3733 175.706 18.08 175.877 17.696 L177.445 17.696 C177.178 18.464 176.725 19.0667 176.085 19.504 C175.456 19.9413 174.698 20.16 173.813 20.16 Z M182.826 23.44 C181.802 23.44 180.954 23.2053 180.282 22.736 C179.621 22.2773 179.221 21.664 179.082 20.896 L180.65 20.896 C180.757 21.248 180.992 21.5253 181.354 21.728 C181.728 21.9307 182.224 22.032 182.842 22.032 C183.642 22.032 184.24 21.8347 184.634 21.44 C185.029 21.0453 185.226 20.4587 185.226 19.68 L185.226 17.92 L185.37 17.952 C185.21 18.5707 184.864 19.0613 184.33 19.424 C183.797 19.776 183.157 19.952 182.41 19.952 C181.696 19.952 181.066 19.7813 180.522 19.44 C179.978 19.0987 179.557 18.624 179.258 18.016 C178.96 17.3973 178.81 16.6773 178.81 15.856 C178.81 15.024 178.965 14.2933 179.274 13.664 C179.584 13.0347 180.016 12.5493 180.57 12.208 C181.136 11.8667 181.792 11.696 182.538 11.696 C183.306 11.696 183.941 11.8827 184.442 12.256 C184.954 12.6187 185.28 13.136 185.418 13.808 L185.29 13.824 L185.29 11.84 L186.874 11.84 L186.874 19.664 C186.874 20.8373 186.512 21.76 185.786 22.432 C185.072 23.104 184.085 23.44 182.826 23.44 Z M182.906 18.608 C183.621 18.608 184.192 18.3573 184.618 17.856 C185.056 17.3547 185.274 16.6667 185.274 15.792 C185.274 14.9387 185.056 14.2667 184.618 13.776 C184.192 13.2853 183.616 13.04 182.89 13.04 C182.165 13.04 181.589 13.2907 181.162 13.792 C180.736 14.2827 180.522 14.9653 180.522 15.84 C180.522 16.6933 180.736 17.3707 181.162 17.872 C181.6 18.3627 182.181 18.608 182.906 18.608 Z M194.271 20 C194.218 19.7973 194.18 19.5733 194.159 19.328 C194.148 19.0827 194.143 18.784 194.143 18.432 L194.063 18.432 L194.063 14.544 C194.063 14.0213 193.93 13.632 193.663 13.376 C193.407 13.1093 192.996 12.976 192.431 12.976 C191.887 12.976 191.45 13.0827 191.119 13.296 C190.799 13.5093 190.612 13.8133 190.559 14.208 L188.975 14.208 C189.05 13.44 189.396 12.8267 190.015 12.368 C190.634 11.9093 191.46 11.68 192.495 11.68 C193.562 11.68 194.362 11.9307 194.895 12.432 C195.428 12.9227 195.695 13.648 195.695 14.608 L195.695 18.432 C195.695 18.6773 195.711 18.928 195.743 19.184 C195.775 19.44 195.823 19.712 195.887 20 L194.271 20 Z M191.455 20.16 C190.623 20.16 189.962 19.9573 189.471 19.552 C188.98 19.136 188.735 18.576 188.735 17.872 C188.735 17.1467 188.991 16.576 189.503 16.16 C190.026 15.7333 190.772 15.4453 191.743 15.296 L194.431 14.864 L194.431 16.032 L191.999 16.416 C191.455 16.5013 191.044 16.6453 190.767 16.848 C190.5 17.0507 190.367 17.344 190.367 17.728 C190.367 18.1013 190.49 18.384 190.735 18.576 C190.991 18.7573 191.359 18.848 191.839 18.848 C192.479 18.848 193.007 18.6933 193.423 18.384 C193.85 18.0747 194.063 17.6853 194.063 17.216 L194.271 18.4 C194.079 18.9653 193.738 19.4027 193.247 19.712 C192.756 20.0107 192.159 20.16 191.455 20.16 Z"
+          }
+        ],
+        "layoutGrow": 0,
+        "layoutAlign": "INHERIT",
+        "layoutPositioning": "AUTO",
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": [],
+        "characters": "Generar fechas de entrega",
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT",
+        "textTruncation": "DISABLED",
+        "maxLines": null,
+        "hangingPunctuation": false,
+        "hangingList": false,
+        "listSpacing": 0,
+        "autoRename": true,
+        "fontName": {
+          "family": "Instrument Sans",
+          "style": "Medium"
+        },
+        "fontSize": 16,
+        "fontWeight": 500,
+        "letterSpacing": {
+          "value": 0,
+          "unit": "PIXELS"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 28
+        },
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "textDecorationStyle": null,
+        "textDecorationOffset": null,
+        "textDecorationThickness": null,
+        "textDecorationColor": null,
+        "textDecorationSkipInk": null,
+        "hyperlink": null,
+        "openTypeFeatures": {},
+        "leadingTrim": "NONE"
+      }
+    ]
+  }
+}

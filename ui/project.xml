@@ -1,0 +1,7 @@
+<project theme="simple" lvgl_version="9.5.0">
+    <targets>
+        <target name="target1">
+            <display width="360" height="360"/>
+        </target>
+    </targets>
+</project>
