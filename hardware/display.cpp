@@ -2,6 +2,7 @@
 
 #include "havit_board.h"
 #include "esp_display_panel.hpp"
+#include "esp_attr.h"
 #include "esp_err.h"
 #include "esp_heap_caps.h"
 #include "lvgl.h"
@@ -12,7 +13,7 @@ using esp_panel::drivers::LCD;
 namespace {
 LCD *s_lcd = nullptr;
 
-bool lcd_draw_complete(void *user_data)
+bool IRAM_ATTR lcd_draw_complete(void *user_data)
 {
     lv_display_flush_ready(static_cast<lv_display_t *>(user_data));
     return false;
