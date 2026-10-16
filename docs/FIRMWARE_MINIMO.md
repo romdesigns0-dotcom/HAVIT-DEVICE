@@ -40,11 +40,11 @@ Verificada con:
 idf.py -C firmware build
 ```
 
-Resultado: compilación correcta. El analizador del enlace reportó una imagen de aplicación de **517,892 bytes**; la partición de aplicación es de 12 MiB y conserva **96% libre**.
+Resultado: compilación correcta. El analizador del enlace reportó una imagen de aplicación de **517,896 bytes**; el archivo `.bin` mide **518,016 bytes**. La partición de aplicación es de 12 MiB y conserva **96% libre**.
 
 | Región estática | Uso | Libre | Total |
 | --- | ---: | ---: | ---: |
-| DIRAM | 77,231 B (22.6%) | 264,529 B | 341,760 B |
+| DIRAM | 77,251 B (22.6%) | 264,509 B | 341,760 B |
 | IRAM | 16,383 B (99.99%) | 1 B | 16,384 B |
 | RTC FAST | 52 B (0.63%) | 8,140 B | 8,192 B |
 
