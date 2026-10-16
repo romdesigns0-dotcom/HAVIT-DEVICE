@@ -1,24 +1,4 @@
 dependencies:
-  esp_wifi_config:
-    component_hash: 94a3321fc4574d68feb0c86b1c2173deff977203ad2899216fefa83505946b64
-    dependencies:
-    - name: idf
-      version: '>=5.4'
-    - name: espressif/network_provisioning
-      rules:
-      - if: idf_version >=6.0
-      version: ^1.0.0
-    source:
-      git: https://github.com/WiFiConfig/esp_wifi_config.git
-      path: .
-      type: git
-    targets:
-    - esp32
-    - esp32s2
-    - esp32s3
-    - esp32c3
-    - esp32c6
-    version: 6756469b35512f2586bbf1e14911204550a50728
   espressif/esp-lib-utils:
     component_hash: 9e81fa27e3a8292bed95d91754ebcb8f27f47117328b0b646446f29fc5a847fb
     dependencies:
@@ -73,10 +53,9 @@ dependencies:
       type: service
     version: 9.5.0
 direct_dependencies:
-- esp_wifi_config
 - espressif/esp32_display_panel
 - idf
 - lvgl/lvgl
-manifest_hash: 40d2825f2434fa37d3b1c62ec1e6265f0206179f7a3cdf1e6db7621cf8fd5bac
+manifest_hash: 3ede3f8436995850ef86beb8031b75491dc36d1f1d6d12522f1e788464258b7a
 target: esp32s3
 version: 2.0.0

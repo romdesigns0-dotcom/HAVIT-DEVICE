@@ -4,6 +4,7 @@ build-*/
 firmware/build/
 firmware/build-*/
 firmware/managed_components/
+firmware/sdkconfig
 firmware/.cache/
 firmware/.pytest_cache/
 firmware/sdkconfig.old
