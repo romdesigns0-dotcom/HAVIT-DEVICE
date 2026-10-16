@@ -20,7 +20,7 @@ Target: ESP32-S3, Waveshare ESP32-S3-Touch-LCD-1.85 Rev 2.0
 
 - `core/`: arranque y ciclo de LVGL.
 - `hardware/`: placa, controlador de pantalla y entrada táctil.
-- `ui/components/`, `ui/animations/`, `ui/styles/`: reservados hasta que exista una necesidad concreta.
+- `ui/components/`, `ui/animations/`, `ui/styles/`: directorios de extensión; no contienen componentes gráficos heredados.
 - `ui/modules/`: vista negra actual.
 - `services/`: vacío salvo su nota de alcance.
 - `firmware/components/`: adaptadores ESP-IDF que integran los módulos anteriores en el sistema de componentes.
@@ -30,7 +30,7 @@ Target: ESP32-S3, Waveshare ESP32-S3-Touch-LCD-1.85 Rev 2.0
 
 El commit local `0af752b` en `main` conserva el firmware heredado, los XML y los recursos versionables. La carpeta hermana `lvgl_vscode_project_backup_pre_gui_refactor_20261015` permanece intacta. Los archivos generados de compilación y `managed_components` se excluyen y pueden regenerarse con ESP-IDF y `dependencies.lock`.
 
-En `havit-v2` no están versionados `src/`, `ui/screens/`, XML, imágenes, fuentes, UI generada, documentación del flujo previo, servicios Wi-Fi/BLE, autenticación, NVS store ni la lógica antigua de aplicación. Esa limpieza solo afecta esta rama; no borra el commit `main` ni la carpeta hermana.
+En `havit-v2` no están versionados `src/`, `ui/screens/`, XML, imágenes, fuentes exportadas, componentes gráficos generados, documentación del flujo previo, servicios Wi-Fi/BLE, autenticación, NVS store ni la lógica antigua de aplicación. Esa limpieza solo afecta esta rama; no borra el commit `main` ni la carpeta hermana. El UI de firmware compila únicamente `ui/modules/blank_screen.c`; LVGL y sus fuentes internas se obtienen como dependencia fijada en `dependencies.lock`.
 
 ## Compilación
 
@@ -40,7 +40,7 @@ Verificada con:
 idf.py -C firmware build
 ```
 
-Resultado: compilación correcta. El analizador del enlace reportó una imagen de aplicación de **517,896 bytes**; el archivo `.bin` mide **518,016 bytes**. La partición de aplicación es de 12 MiB y conserva **96% libre**.
+Resultado: compilación limpia correcta con `idf.py -C firmware clean` seguida de `idf.py -C firmware build`. La imagen de aplicación mide **518,016 bytes** (`0x7e780`); la partición de aplicación es de 12 MiB y conserva **96% libre**. El mapa de compilación contiene las unidades propias de pantalla, táctil, núcleo, pantalla negra y `main`; no contiene fuentes bajo `ui/components/`, `ui/screens/`, imágenes ni fuentes exportadas.
 
 | Región estática | Uso | Libre | Total |
 | --- | ---: | ---: | ---: |
@@ -60,4 +60,6 @@ idf.py -C firmware -p COMx flash monitor
 
 Al reiniciar, la pantalla debe quedar negra. Al tocarla, el monitor debe mostrar `Touch detected at x=… y=…`. No uses `erase-flash`: la aplicación no modifica NVS y la tabla mantiene su partición NVS.
 
-La animación de ojos queda fuera de esta fase y se implementará solo tras confirmar la prueba física de pantalla y táctil.
+Prueba física completada en `COM5`: el equipo arrancó con la pantalla negra, inicializó ST77916 y CST816S, y el monitor serie registró múltiples eventos `Touch detected` con coordenadas. No se borró la partición NVS.
+
+La animación de ojos queda fuera de esta fase y se implementará solo tras la autorización para comenzar ese módulo.
