@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PANTALLA 1" clip-path="url(#clip0_0_4)">
+<rect width="360" height="360" fill="white" fill-opacity="0.2"/>
+<rect id="Rectangle 1" width="360" height="360" fill="black"/>
+<circle id="Ellipse 1" cx="180" cy="180" r="180.5" stroke="black" stroke-opacity="0.25"/>
+<path id="Ellipse 3" d="M180 351C85.5593 351 9 274.441 8.99998 180C8.99998 85.5593 85.5593 9.00003 180 9.00002C274.441 9.00001 351 85.5593 351 180C351 274.441 274.441 351 180 351Z" stroke="url(#paint0_linear_0_4)" stroke-width="8"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="180" y1="355" x2="180" y2="4.99998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#699768"/>
+<stop offset="1" stop-color="#77B7DB"/>
+</linearGradient>
+<clipPath id="clip0_0_4">
+<rect width="360" height="360" fill="white"/>
+</clipPath>
+</defs>
+</svg>

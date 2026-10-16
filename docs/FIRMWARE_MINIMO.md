@@ -1,65 +1,71 @@
-# Fase 0–1: base de firmware mínimo
+# Firmware HAVIT — introducción y primer paso de acceso
 
 Fecha: 16 de octubre de 2026  
 Rama: `havit-v2`  
 ESP-IDF: 5.4.2  
 Target: ESP32-S3, Waveshare ESP32-S3-Touch-LCD-1.85 Rev 2.0
 
-## Alcance implementado
+## Estado de la etapa
 
-- Arranque con ESP-IDF y FreeRTOS.
-- Panel circular 360×360 mediante ST77916 y táctil CST816S.
-- LVGL 9.5 con búferes RGB565 parciales de 16 líneas en RAM interna DMA.
-- Tick de LVGL de 2 ms y tarea de manejo de 8 KiB.
-- Vista negra sin pantallas ni recursos gráficos antiguos.
-- Detección táctil mediante interrupción cuando el driver la habilita; el monitor serie imprime las coordenadas.
-- PSRAM octal habilitada. LVGL en modo de configuración mínimo; ejemplos y demos desactivados.
-- No se inicializa, escribe ni borra NVS desde la aplicación mínima.
+El arranque muestra una sola vista LVGL de ojos sobre el fondo compartido de `PANTALLA DEFAULT`. El usuario validó físicamente el aspecto del aro y de los ojos. La vista mantiene los parpadeos en loop.
+
+Al tocar cualquier punto de la vista de ojos, la transición queda solicitada y espera a completar el siguiente pestañeo antes de pasar a `LOG IN 1`. Esta regla también cubre un toque recibido antes del primer pestañeo.
+
+`LOG IN 1` se basa en el frame Figma `349:2084` y muestra “Hola, Soy Havit.”, “Empecemos por aquí” y el círculo azul con flecha. Tras el pestañeo solicitado, los ojos se desvanecen con Ease in/out durante 300 ms; título, subtítulo y botón aparecen después en secuencia con opacidad escalonada. Todo ocurre dentro de la misma vista LVGL, sin reconstruir otra pantalla. El botón queda visual, pendiente de conectar al próximo paso hasta que estén listos los detalles de navegación.
+
+Los frames `LOG IN 2`, `LOG IN WIFI`, `LOG IN PIN` y `Welcome Back` están localizados en la sección `PANTALLA 2` del Figma; esperan los elementos que el usuario agregará. No se implementan todavía.
+
+Las cuatro poses Figma de los ojos son estáticas, sin cronología asociada. Los tiempos escogidos para la animación LVGL son apertura 460 ms, ajuste 180 ms y parpadeo cada 3.4 s; el usuario validó visualmente el resultado.
 
 ## Estructura activa
 
-- `core/`: arranque y ciclo de LVGL.
-- `hardware/`: placa, controlador de pantalla y entrada táctil.
-- `ui/components/`, `ui/animations/`, `ui/styles/`: directorios de extensión; no contienen componentes gráficos heredados.
-- `ui/modules/`: vista negra actual.
-- `services/`: vacío salvo su nota de alcance.
-- `firmware/components/`: adaptadores ESP-IDF que integran los módulos anteriores en el sistema de componentes.
-- `firmware/sdkconfig.defaults`: configuración reproducible del target, pantalla, táctil, PSRAM y LVGL.
+- `core/`: arranque y ciclo LVGL.
+- `hardware/`: placa, pantalla ST77916 y táctil CST816S.
+- `ui/components/havit_default_background.c`: fondo negro compartido con aro degradado.
+- `ui/include/havit_default_background.h`: API del fondo común.
+- `ui/assets/havit_default_background.svg`: aro vectorial de `PANTALLA DEFAULT`.
+- `ui/modules/eyes_intro.c`: vista de ojos y detección de toque.
+- `ui/animations/eyes_intro_animation.c`: apertura, parpadeo en loop y callback de salida tras un pestañeo completo.
+- `ui/modules/login1.c`: capas de texto e imágenes LVGL de la primera pantalla de acceso.
+- `ui/assets/login1_continue_circle.svg`, `login1_continue_arrow.svg`: recursos SVG locales del botón de `LOG IN 1`.
+- `ui/fonts/InstrumentSans-Regular.ttf`, `OFL.txt` y `instrument_sans_regular_14.c` / `instrument_sans_regular_22.c`: fuente Instrument Sans con licencia SIL OFL y fuentes LVGL generadas sin compresión de glifos para los tamaños usados. LVGL tiene desactivado el decodificador de fuentes comprimidas.
+- `services/`: sin servicios de aplicación añadidos todavía.
+- `firmware/components/`: adaptadores ESP-IDF y configuración de dependencias.
 
-## Respaldo anterior
-
-El commit local `0af752b` en `main` conserva el firmware heredado, los XML y los recursos versionables. La carpeta hermana `lvgl_vscode_project_backup_pre_gui_refactor_20261015` permanece intacta. Los archivos generados de compilación y `managed_components` se excluyen y pueden regenerarse con ESP-IDF y `dependencies.lock`.
-
-En `havit-v2` no están versionados `src/`, `ui/screens/`, XML, imágenes, fuentes exportadas, componentes gráficos generados, documentación del flujo previo, servicios Wi-Fi/BLE, autenticación, NVS store ni la lógica antigua de aplicación. Esa limpieza solo afecta esta rama; no borra el commit `main` ni la carpeta hermana. El UI de firmware compila únicamente `ui/modules/blank_screen.c`; LVGL y sus fuentes internas se obtienen como dependencia fijada en `dependencies.lock`.
+El proyecto conserva ESP-IDF 5.4.2, FreeRTOS, LVGL 9.5, pantalla circular 360×360, táctil, PSRAM octal de 8 MB y búferes parciales RGB565 de 16 líneas en DMA interno. LVGL tiene habilitados SVG/ThorVG, imágenes y labels. Los textos usan Instrument Sans 22 px y 14 px, integradas como fuentes LVGL estáticas. La aplicación no inicializa, escribe ni borra NVS.
 
 ## Compilación
 
-Verificada con:
-
-```powershell
-idf.py -C firmware build
-```
-
-Resultado: compilación limpia correcta con `idf.py -C firmware clean` seguida de `idf.py -C firmware build`. La imagen de aplicación mide **518,016 bytes** (`0x7e780`); la partición de aplicación es de 12 MiB y conserva **96% libre**. El mapa de compilación contiene las unidades propias de pantalla, táctil, núcleo, pantalla negra y `main`; no contiene fuentes bajo `ui/components/`, `ui/screens/`, imágenes ni fuentes exportadas.
+`idf.py -C firmware build` terminó correctamente con las fuentes regeneradas y la transición a `LOG IN 1`. El binario generado es `firmware/build/havit_os_firmware.bin`, tamaño **727,248 bytes** (`0xB18D0`); `idf.py size` reporta **727,128 bytes** en la imagen. Queda **94% libre** en la partición de aplicación de 12 MiB.
 
 | Región estática | Uso | Libre | Total |
 | --- | ---: | ---: | ---: |
-| DIRAM | 77,251 B (22.6%) | 264,509 B | 341,760 B |
-| IRAM | 16,383 B (99.99%) | 1 B | 16,384 B |
-| RTC FAST | 52 B (0.63%) | 8,140 B | 8,192 B |
+| DIRAM | 78,235 B | 263,525 B | 341,760 B |
+| IRAM | 16,383 B | 1 B | 16,384 B |
+| RTC FAST | 52 B | 8,140 B | 8,192 B |
 
-El uso de heap disponible en ejecución, incluida la PSRAM, requiere medirlo en el dispositivo. La ejecución y entrada táctil tampoco se han validado físicamente todavía.
+El heap libre y el uso dinámico de PSRAM se medirán en ejecución.
 
-## Prueba física pendiente
+La compilación propia incluye `havit_default_background.c`, `eyes_intro.c`, `login1.c` y `eyes_intro_animation.c`. No incluye pantallas antiguas, XML históricos, recursos gráficos viejos, navegación anterior, Wi‑Fi/BLE ni autenticación.
 
-Conecta el ESP32-S3 por USB y sustituye `COMx` por el puerto serie del dispositivo:
+## Carga y prueba física de esta etapa
+
+La compilación corregida con Instrument Sans sin compresión y la transición a `LOG IN 1` se cargó por COM5; esptool verificó los hashes. No se ejecutó `erase-flash`; se escribieron bootloader, aplicación y tabla de particiones, dejando intacta NVS. El monitor confirmó el arranque de ESP-IDF, PSRAM, ST77916, CST816S y la vista de ojos sin panic. Falta la confirmación visual física de que los glifos y la secuencia de Login 1 ya se vean correctamente.
+
+Inspecciona ahora físicamente la nueva compilación:
 
 ```powershell
-idf.py -C firmware -p COMx flash monitor
+idf.py -C firmware -p COM5 -b 460800 flash
+idf.py -C firmware -p COM5 monitor
 ```
 
-Al reiniciar, la pantalla debe quedar negra. Al tocarla, el monitor debe mostrar `Touch detected at x=… y=…`. No uses `erase-flash`: la aplicación no modifica NVS y la tabla mantiene su partición NVS.
+Al arrancar, comprueba que los ojos sigan parpadeando. Toca cualquier punto: debe terminar un parpadeo completo, desvanecer los ojos en 300 ms y revelar por capas el título, subtítulo y botón; verifica que la tipografía sea Instrument Sans y que el botón no aparezca como rectángulos. Sal del monitor con `Ctrl+]` para liberar COM5. No uses `erase-flash`: la aplicación no borra ni modifica NVS.
 
-Prueba física completada en `COM5`: el equipo arrancó con la pantalla negra, inicializó ST77916 y CST816S, y el monitor serie registró múltiples eventos `Touch detected` con coordenadas. No se borró la partición NVS.
+La versión anterior de ojos y fondo compartido ya fue validada visualmente por el usuario. Esta etapa queda detenida para validar la transición y `LOG IN 1` en el dispositivo antes de continuar.
+## Corrección de caracteres en LOG IN 1
 
-La animación de ojos queda fuera de esta fase y se implementará solo tras la autorización para comenzar ese módulo.
+Se habilitó explícitamente `CONFIG_LV_TXT_ENC_UTF8=y` en `firmware/sdkconfig.defaults`. Con `CONFIG_LV_CONF_MINIMAL`, LVGL estaba seleccionando ASCII por defecto; las cadenas UTF-8 (por ejemplo, «aquí») se interpretaban con glifos incorrectos. La configuración local resultante confirma UTF-8 activo y ASCII desactivado.
+
+La compilación terminó correctamente: `firmware/build/havit_os_firmware.bin`, **727,744 bytes** (`0xB1AC0`), con 94% de espacio libre en la partición de aplicación (12 MiB). Se cargó por COM5; esptool verificó los hashes. No se usó `erase-flash` y la partición NVS (`0x9000`) no fue escrita.
+
+El monitor serie confirmó el arranque de la aplicación, PSRAM, pantalla ST77916, táctil CST816S y la vista de ojos sin panic. Falta la comprobación visual del texto en el dispositivo. En LOG IN 1, confirma que se lea «Hola, Soy Havit.» y «Empecemos por aquí», especialmente la `í` acentuada.

@@ -13,6 +13,7 @@ namespace {
 constexpr char TAG[] = "havit_touch";
 Touch *s_touch = nullptr;
 volatile bool s_touch_pending = false;
+havit_touch_callback_t s_touch_callback = nullptr;
 
 void read_touch(lv_indev_t *, lv_indev_data_t *data)
 {
@@ -33,11 +34,19 @@ void read_touch(lv_indev_t *, lv_indev_data_t *data)
     data->point.x = last_point.x;
     data->point.y = last_point.y;
     const bool pressed = last_press_us != 0 && now - last_press_us < 120000;
-    if(pressed && !was_pressed) ESP_LOGI(TAG, "Touch detected at x=%d y=%d", last_point.x, last_point.y);
+    if(pressed && !was_pressed) {
+        ESP_LOGI(TAG, "Touch detected at x=%d y=%d", last_point.x, last_point.y);
+        if(s_touch_callback != nullptr) s_touch_callback(last_point.x, last_point.y);
+    }
     was_pressed = pressed;
     data->state = pressed ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
 }
 } // namespace
+
+void havit_touch_set_callback(havit_touch_callback_t callback)
+{
+    s_touch_callback = callback;
+}
 
 esp_err_t havit_touch_init(void)
 {
