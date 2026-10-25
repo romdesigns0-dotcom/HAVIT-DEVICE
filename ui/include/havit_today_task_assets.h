@@ -1,0 +1,21 @@
+#pragma once
+#include "lvgl.h"
+extern const lv_image_dsc_t havit_today_task_arrow;
+extern const lv_image_dsc_t havit_today_task_arrow_alt;
+extern const lv_image_dsc_t havit_today_task_arrow_small;
+extern const lv_image_dsc_t havit_today_task_box1;
+extern const lv_image_dsc_t havit_today_task_box2;
+extern const lv_image_dsc_t havit_today_task_box3;
+extern const lv_image_dsc_t havit_today_task_close;
+extern const lv_image_dsc_t havit_today_task_close_bg;
+extern const lv_image_dsc_t havit_today_task_delete;
+extern const lv_image_dsc_t havit_today_task_delete_bg;
+extern const lv_image_dsc_t havit_today_task_detail_bg;
+extern const lv_image_dsc_t havit_today_task_detail_close;
+extern const lv_image_dsc_t havit_today_task_edit_select;
+extern const lv_image_dsc_t havit_today_task_month;
+extern const lv_image_dsc_t havit_today_task_more;
+extern const lv_image_dsc_t havit_today_task_pencil;
+extern const lv_image_dsc_t havit_today_task_select_bg;
+extern const lv_image_dsc_t havit_today_task_select_close;
+extern const lv_image_dsc_t havit_today_task_share;

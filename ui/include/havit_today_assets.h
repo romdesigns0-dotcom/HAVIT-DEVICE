@@ -1,0 +1,34 @@
+#pragma once
+#include "lvgl.h"
+extern const lv_image_dsc_t havit_add_imgEllipse10;
+extern const lv_image_dsc_t havit_add_imgEllipse11;
+extern const lv_image_dsc_t havit_add_imgEllipse14;
+extern const lv_image_dsc_t havit_add_imgEllipse23;
+extern const lv_image_dsc_t havit_add_imgEllipse24;
+extern const lv_image_dsc_t havit_add_imgEllipse26;
+extern const lv_image_dsc_t havit_add_imgEllipse28;
+extern const lv_image_dsc_t havit_add_imgHugeiconsCancel01;
+#define havit_day_imgEllipse10 havit_add_imgEllipse11
+extern const lv_image_dsc_t havit_day_imgEllipse14;
+extern const lv_image_dsc_t havit_day_imgEllipse15;
+extern const lv_image_dsc_t havit_day_imgEllipse16;
+extern const lv_image_dsc_t havit_day_imgEllipse18;
+#define havit_day_imgEllipse19 havit_add_imgEllipse10
+#define havit_day_imgEllipse28 havit_add_imgEllipse28
+extern const lv_image_dsc_t havit_day_imgGroup23;
+#define havit_day_imgHugeiconsCancel01 havit_add_imgHugeiconsCancel01
+extern const lv_image_dsc_t havit_month_imgEllipse52;
+extern const lv_image_dsc_t havit_month_imgGroup32;
+extern const lv_image_dsc_t havit_month_imgGroup33;
+extern const lv_image_dsc_t havit_month_imgGroup34;
+extern const lv_image_dsc_t havit_month_imgGroup35;
+#define havit_month_imgGroup36 havit_month_imgGroup32
+extern const lv_image_dsc_t havit_month_imgIcon;
+extern const lv_image_dsc_t havit_today_imgAndrsrxnPlus;
+#define havit_today_imgEllipse10 havit_add_imgEllipse10
+#define havit_today_imgEllipse11 havit_add_imgEllipse11
+#define havit_today_imgEllipse14 havit_add_imgEllipse14
+extern const lv_image_dsc_t havit_today_imgGroup;
+extern const lv_image_dsc_t havit_today_imgGroup1;
+extern const lv_image_dsc_t havit_today_imgGroup2;
+extern const lv_image_dsc_t havit_today_imgGroup24;

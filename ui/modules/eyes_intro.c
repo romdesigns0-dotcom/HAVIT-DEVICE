@@ -1,6 +1,7 @@
 #include "havit_ui.h"
 
 #include "havit_eyes_intro_animation.h"
+#include "havit_device_claim.h"
 #include "havit_default_background.h"
 #include "havit_touch.h"
 #include "esp_log.h"
@@ -9,6 +10,10 @@
 
 static lv_obj_t *s_left_eye;
 static lv_obj_t *s_right_eye;
+static lv_obj_t *s_default_1_background;
+static lv_obj_t *s_default_2_background;
+static lv_obj_t *s_default_3_background;
+static lv_obj_t *s_default_4_background;
 static bool s_intro_finished;
 static bool s_login_visible;
 static const char *TAG = "havit_intro";
@@ -33,8 +38,16 @@ static lv_obj_t *create_eye(lv_obj_t *parent, int32_t x)
 static void reveal_login1_after_eyes(lv_anim_t *animation)
 {
     LV_UNUSED(animation);
+    /* Default 1 belongs to the eyes; the app uses the thinner Default 2 asset. */
+    if(s_default_1_background != NULL)
+        lv_obj_add_flag(s_default_1_background, LV_OBJ_FLAG_HIDDEN);
+    if(s_default_2_background != NULL)
+        lv_obj_clear_flag(s_default_2_background, LV_OBJ_FLAG_HIDDEN);
     ESP_LOGI(TAG, "Eye blink complete; revealing Login 1");
-    havit_ui_reveal_login1();
+    havit_device_claim_snapshot_t claim;
+    havit_device_claim_snapshot(&claim);
+    if(claim.binding_id[0]) havit_ui_navigate_to(HAVIT_UI_SCREEN_TODAY);
+    else havit_ui_reveal_login1();
     s_login_visible = true;
 }
 
@@ -81,13 +94,37 @@ static void intro_touched(int32_t x, int32_t y)
     }
 }
 
+static void resume_known_device(lv_timer_t *timer)
+{
+    if(s_intro_finished) { lv_timer_delete(timer); return; }
+    havit_device_claim_snapshot_t claim;
+    havit_device_claim_snapshot(&claim);
+    if(claim.binding_id[0]) {
+        havit_eyes_intro_animation_request_exit();
+        lv_timer_delete(timer);
+    }
+}
+
 void havit_ui_show_eyes_intro(void)
 {
     s_intro_finished = false;
     s_login_visible = false;
     lv_obj_t *screen = lv_obj_create(NULL);
     lv_obj_remove_style_all(screen);
-    havit_default_background_create(screen);
+    s_default_3_background = havit_default_background_create(
+        screen, HAVIT_DEFAULT_BACKGROUND_3_SCROLL_BASE);
+    s_default_1_background = havit_default_background_create(
+        screen, HAVIT_DEFAULT_BACKGROUND_1_EYES);
+    s_default_2_background = havit_default_background_create(
+        screen, HAVIT_DEFAULT_BACKGROUND_2_APP);
+    s_default_4_background = havit_default_background_create(
+        screen, HAVIT_DEFAULT_BACKGROUND_4_SCROLL_RING);
+    if(s_default_2_background != NULL)
+        lv_obj_add_flag(s_default_2_background, LV_OBJ_FLAG_HIDDEN);
+    if(s_default_3_background != NULL)
+        lv_obj_move_background(s_default_3_background);
+    if(s_default_4_background != NULL)
+        lv_obj_add_flag(s_default_4_background, LV_OBJ_FLAG_HIDDEN);
     havit_ui_prepare_login_flow(screen);
 
     s_left_eye = create_eye(screen, 112);
@@ -96,4 +133,5 @@ void havit_ui_show_eyes_intro(void)
     lv_screen_load(screen);
 
     havit_eyes_intro_animation_start(s_left_eye, s_right_eye, eyes_intro_completed);
+    lv_timer_create(resume_known_device, 1000, NULL);
 }

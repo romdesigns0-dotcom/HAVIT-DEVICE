@@ -1,0 +1,12 @@
+#pragma once
+#include "lvgl.h"
+extern const lv_image_dsc_t havit_quick_task_clock;
+extern const lv_image_dsc_t havit_quick_task_close;
+extern const lv_image_dsc_t havit_quick_task_close_background;
+extern const lv_image_dsc_t havit_quick_task_done_check;
+extern const lv_image_dsc_t havit_quick_task_edit;
+extern const lv_image_dsc_t havit_quick_task_line;
+extern const lv_image_dsc_t havit_quick_task_separator_dot;
+extern const lv_image_dsc_t havit_quick_task_timer_cancel;
+#define havit_quick_task_timer_check havit_quick_task_done_check
+extern const lv_image_dsc_t havit_quick_task_voice;

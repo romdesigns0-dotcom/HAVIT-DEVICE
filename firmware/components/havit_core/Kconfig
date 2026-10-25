@@ -1,0 +1,9 @@
+menu "HAVIT development tools"
+config HAVIT_DEBUG_USB_CONTROL
+    bool "Enable local USB touch injection"
+    depends on ESP_CONSOLE_USB_SERIAL_JTAG
+    default n
+    help
+        Development-only tap/swipe/status commands over the local USB console.
+        Disable in production builds.
+endmenu

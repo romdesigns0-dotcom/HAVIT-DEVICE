@@ -1,0 +1,32 @@
+#pragma once
+#include "havit_quick_task_assets.h"
+#include "havit_today_assets.h"
+extern const lv_image_dsc_t havit_team_imgAntDesignCalendarFilled;
+#define havit_team_imgBitcoinIconsEditFilled havit_quick_task_edit
+#define havit_team_imgEllipse28 havit_day_imgEllipse28
+extern const lv_image_dsc_t havit_team_imgEllipse56;
+extern const lv_image_dsc_t havit_team_imgEllipse57;
+extern const lv_image_dsc_t havit_team_imgGroup23;
+#define havit_team_imgGroup56 havit_quick_task_clock
+#define havit_team_imgGroup58 havit_quick_task_separator_dot
+#define havit_team_imgHugeiconsCancel01 havit_day_imgHugeiconsCancel01
+#define havit_team_imgIcBaselineKeyboardVoice havit_quick_task_voice
+#define havit_team_imgVector5 havit_quick_task_line
+extern const lv_image_dsc_t havit_team_imgVector8;
+extern const lv_image_dsc_t havit_team_imgVector9;
+extern const lv_image_dsc_t havit_team_view1_imgGroup;
+extern const lv_image_dsc_t havit_team_view2_imgEllipse57;
+extern const lv_image_dsc_t havit_team_view2_imgEllipse58;
+extern const lv_image_dsc_t havit_team_view2_imgGroup20;
+extern const lv_image_dsc_t havit_team_view2_imgIcon;
+extern const lv_image_dsc_t havit_team_view3_imgAkarIconsCircleCheckFill;
+extern const lv_image_dsc_t havit_team_view3_imgBitcoinIconsEditFilled;
+extern const lv_image_dsc_t havit_team_view3_imgEllipse63;
+extern const lv_image_dsc_t havit_team_view3_imgEllipse64;
+extern const lv_image_dsc_t havit_team_view3_imgEllipse65;
+extern const lv_image_dsc_t havit_team_view3_imgEllipse66;
+extern const lv_image_dsc_t havit_team_view3_imgGroup;
+extern const lv_image_dsc_t havit_team_view3_imgGroup1;
+extern const lv_image_dsc_t havit_team_view3_imgGroup2;
+extern const lv_image_dsc_t havit_team_view4_imgGroup45;
+extern const lv_image_dsc_t havit_team_view4_imgVector;

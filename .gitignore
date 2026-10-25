@@ -41,6 +41,14 @@ ui/.cache.json
 Thumbs.db
 .DS_Store
 
+# Python tools and local virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
 # Secrets and local credentials
 .env
 .env.*
