@@ -1,45 +1,103 @@
 # Vinculación de HAVIT
 
-## Flujo acordado
+Este documento describe el flujo vigente entre la app iOS, la placa ESP32-S3 y
+el backend Firebase. Los identificadores de dispositivos reales y sus pruebas
+de propiedad se mantienen fuera de la documentación pública.
 
-1. iOS encuentra HAVIT por BLE y verifica el PoP de seis dígitos una vez.
-2. Dentro de Security 1, iOS lee `havit-info`, obtiene `device_id` y solicita `prepare_claim`.
-3. iOS conserva la prueba de 32 bytes en Keychain y la vuelve a leer. Envía `ack_claim`; HAVIT persiste sesión/hash/ACK en su partición dedicada y borra el secreto de RAM.
-4. iOS envía Wi-Fi por BLE. HAVIT se conecta y publica la prueba confirmada por HTTPS.
-5. La persona inicia sesión en HAVIT móvil. iOS obtiene Firebase ID token y llama a `POST /v1/devices/claim` con la prueba de Keychain.
-6. HAVIT consulta `GET /v1/device/link` por Wi-Fi y espera respuesta `linked` antes de mostrar el acceso a Today.
+## Flujo de alta
 
-No hay otro PIN, no se confirma propiedad con un toque y el teléfono no necesita seguir conectado por BLE. El protocolo de actividades todavía no está implementado; por eso la pantalla vinculada no dice que las tareas ya se sincronizaron.
+1. iOS encuentra HAVIT por BLE, se conecta con Espressif Security 1 y valida el
+   código de posesión de seis dígitos que muestra la placa.
+2. Antes de enviar Wi-Fi, iOS lee havit-info, valida protocolo, identidad
+   completa e identity_provisioned.
+3. iOS solicita prepare_claim en havit-claim, guarda la prueba temporal en
+   Keychain con atributo ThisDeviceOnly y vuelve a leerla para verificarla.
+4. iOS calcula el hash acordado y envía ack_claim. Wi-Fi solo se envía si la
+   respuesta es acknowledged: true.
+5. La placa se conecta a Wi-Fi y publica su sesión con su credencial individual
+   instalada por USB en la partición havit_identity.
+6. Después de iniciar sesión, iOS presenta la prueba guardada junto con el
+   Firebase ID token. El backend verifica cuenta, credencial y prueba; al
+   aceptar crea un bindingId.
+7. App y placa muestran «Dispositivo vinculado» tras confirmar el vínculo con
+   el servidor. Un nombre BLE o un ID por sí solos no prueban propiedad.
 
-## Implementación del firmware
+El PIN de seis dígitos verifica posesión una vez durante el aprovisionamiento.
+No se necesita un segundo PIN para iniciar sesión, sincronizar o reiniciar la
+placa. Si BLE se cierra o iOS se reinicia, la prueba pendiente permanece en
+Keychain hasta que la reclamación se confirme o caduque.
 
-- `services/connectivity.c`: configura BLE/Wi-Fi y publica los estados de red.
-- `services/device_claim.c`: endpoint BLE cifrado, NVS de identidad/reclamación y cliente HTTPS de vinculación.
-- `firmware/partitions.csv`: reserva `havit_identity` en `0xC10000` con tamaño `0x6000`; la NVS normal no se mueve.
-- La identidad abre el namespace `havit_identity`, igual al CSV de `register-device.ts`, y valida que `device_id` coincida con el MAC completo anunciado por `havit-info`.
-- Restablecer Wi-Fi no invalida el ACK ni borra el binding. Después de reiniciar, el binding guardado se trata como caché hasta que `GET /v1/device/link` lo confirme con `state: linked` y `bindingId`.
-- El vencimiento ISO devuelto al publicar queda persistido. Después de un reinicio, el firmware sincroniza hora antes de decidir si la prueba venció. `Retry-After` y `retryAfterSeconds` se guardan para evitar reintentos antes del plazo.
-- HTTPS exige hora válida por SNTP y valida certificados con el bundle completo de ESP-IDF.
-- Sin credencial individual válida no se llama a la API y la UI indica alta USB pendiente.
+## Almacenamiento en el ESP32
 
-## Ciclo de propiedad — cambio local pendiente de despliegue
+- havit_identity: identidad y credencial propia de la unidad, cargadas por una
+  herramienta de operador. El backend conserva el hash de la credencial.
+- havit_claim: sesión de prueba/ACK y estado de vinculación en el firmware.
+- havit_tasks: snapshot y operaciones pendientes de actividades.
+- NVS de Wi-Fi: SSID y configuración de red del aprovisionamiento.
 
-- Restablecer Wi-Fi no toca el dueño, la identidad ni el ACK persistido. Cerrar sesión en iOS tampoco llama al endpoint de unlink.
-- El backend devuelve `unclaimed` después de la desvinculación. Si la placa estuvo offline, rechaza por `ownershipEpoch` cualquier prueba de una generación anterior; el firmware elimina binding y sesión BLE guardados antes de pedir una ventana BLE nueva.
-- Si el siguiente `bindingId` difiere del que quedó en NVS, el firmware purga la prueba anterior y conserva la identidad de la unidad y la configuración Wi-Fi.
-- No hay caché/cola local de tareas en el firmware; se limpia solo el estado local de vinculación. La sincronización de tareas se implementará después con namespace por dueño y binding.
-- Esta rama aún no se ha escrito en el ESP32. La prueba A → unlink con Wi-Fi desconectado → reconnect → B requiere que el backend actualizado esté desplegado y usar dos cuentas de prueba.
-- Compilación incremental con ESP-IDF 5.4.2 tras este cambio: correcta. `build-ownership-cycle/havit_os_firmware.bin`, `0x40B950` (4,241,744 bytes); quedan 8,341,168 bytes (66 %) en la partición de aplicación de 12 MiB. No se flasheó la placa ni se cambió su NVS.
+El mapa real de particiones está en firmware/partitions.csv. La identidad,
+la red Wi-Fi, el estado de propiedad y las tareas ocupan áreas distintas.
+Actualizar firmware no debe borrar esas particiones. La preparación de
+identidad es un procedimiento de operador: sigue la
+[guía de backend](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/backend/README.md)
+y guarda identity.csv/identity.bin fuera de ambos repositorios.
 
-## Validación de firmware y placa — 2026-10-22
+## Sincronización normal
 
-- Compilación limpia con ESP-IDF 5.4.2, ESP32-S3: correcta. `havit_os_firmware.bin` mide 4,241,024 bytes (`0x40B680`); quedan 8,341,888 bytes (66 %) en la partición de aplicación de 12 MiB.
-- `device_id` correcto, confirmado en el arranque: `havit-2884859195aa` (MAC Bluetooth de la unidad). No usar la MAC base que devuelve `esptool read_mac` para este identificador.
-- El registro correcto quedó activo en Firebase. Un registro preliminar con el ID derivado de la MAC base se revocó; no se usa en la placa. Sus archivos locales privados permanecen revocados y fuera del repositorio.
-- La herramienta de operador verificó la tabla instalada y escribió solo `havit_identity` en `0xC10000` (`0x6000` bytes). La lectura de vuelta coincide con el binario privado; el namespace `havit_identity`, el ID y el formato del token se validaron sin imprimir la credencial.
-- Se escribió únicamente la aplicación en `0x10000`; esptool verificó el hash. El rango escrito termina en `0x41BFFF`. No se reescribieron bootloader ni tabla y no se tocó la NVS estándar de `0x9000` ni los datos Wi-Fi.
-- El monitor serie confirma arranque con ESP-IDF 5.4.2, tabla correcta, PSRAM de 8 MiB, panel ST77916, táctil CST816S (ID 181), identidad cargada para el ID correcto e inicio del anuncio BLE `HAVIT-95AA`.
-- La prueba BLE desde Windows encontró `HAVIT-95AA`, el servicio de provisión, endpoints `havit-info` y `havit-claim`, y negociación Security 1 + PoP. No se enviaron credenciales Wi-Fi ni se hizo el ACK de una sesión real.
-- La API respondió HTTP 200 `unclaimed` usando la credencial recién registrada; la credencial no se imprimió. El dispositivo sigue sin vincular a una cuenta y no hay sincronización de tareas.
+- Con Wi-Fi, el ESP32 llama por HTTPS a GET /v1/device/sync y
+  POST /v1/device/events. La app accede a la misma cuenta por HTTPS usando
+  Firebase Authentication.
+- Sin Wi-Fi en el ESP32, HAVIT puede transferir mensajes cifrados por BLE a la
+  app. El iPhone los retransmite al endpoint HTTPS con Internet móvil o Wi-Fi.
+  Este relay requiere la app en primer plano; iOS no garantiza que se ejecute
+  continuamente suspendida.
+- Sin Internet en ambos lados, las copias y colas quedan locales. Se envían
+  cuando vuelve una conexión autorizada.
+- Los mensajes BLE del relay usan AES-256-GCM y se validan en servidor contra
+  el propietario, el bindingId, la credencial revocable y un nonce reciente.
+  Security 1 del aprovisionamiento no sustituye esta autorización de tareas.
 
-La unidad queda encendida y anunciando BLE para que iOS la pruebe. Todavía falta completar desde iOS `havit-info` → `prepare_claim` → Keychain → `ack_claim` → Wi-Fi → reclamar después del login, y verificar el estado `linked` consultado por el firmware. No uses `nvs_flash_erase()`.
+Contratos: [API y alta de dispositivo](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/backend/README.md),
+[sincronización de actividades](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/docs/TASK-SYNC-IMPLEMENTATION.md)
+y [relay BLE](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/docs/TASK-BLE-RELAY.md).
+
+## Restablecimiento y cambio de cuenta
+
+- **Restablecer Wi-Fi:** borra las credenciales de red y permite configurar
+  otra red. No desvincula ni rota la identidad de fábrica.
+- **Cerrar sesión:** termina la sesión de iOS; no cambia propietario del ESP32.
+- **Desvincular/restablecer de fábrica:** la cuenta propietaria autoriza una
+  solicitud con su Firebase ID token y bindingId. La placa confirma la
+  limpieza por Wi-Fi o por relay BLE si está offline. El servidor finaliza la
+  desvinculación después del acuse y elimina los datos de cuenta solicitados.
+  La identidad de fábrica permanece para requerir una nueva prueba BLE.
+- **Nueva cuenta:** necesita una prueba física BLE nueva y un nuevo bindingId.
+  La cuenta anterior no debe conservar caché, colas ni permisos.
+
+La recuperación de una cuenta original inaccesible requiere el procedimiento
+de operador; un reset local no debe permitir apropiarse de un dispositivo
+remotamente. La aceptación completa A → desvincular con placa offline →
+reclamar desde B debe comprobarse con dos cuentas de prueba antes de considerar
+cerrado el ciclo de propiedad.
+
+## Desarrollo y diagnóstico
+
+El firmware se implementa en C/C++ sobre ESP-IDF 5.4.2, FreeRTOS y LVGL 9.5.
+La pantalla y los controles de la Waveshare ESP32-S3-Touch-LCD-1.85 se
+inicializan en hardware/; servicios de red y estado viven en services/; las
+pantallas LVGL están en ui/modules/.
+
+Desde PowerShell con el entorno ESP-IDF activado:
+
+    idf.py -C firmware build
+    idf.py -C firmware -p COMx flash
+    idf.py -C firmware -p COMx monitor
+
+Usa el puerto que Windows asignó a la placa. No ejecutes erase-flash para una
+actualización normal. Para el flujo iOS/WSL y la arquitectura conjunta, consulta
+el README del dispositivo y
+[ARCHITECTURE.md de HAVIT-APP](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/ARCHITECTURE.md).
+
+Los scripts de diagnóstico BLE requieren seleccionar explícitamente nombre,
+identidad y bindingId de la unidad de prueba. No escribas secretos en
+argumentos visibles, consola, logs ni repositorio.

@@ -127,6 +127,7 @@ Un cambio de firmware no debe borrarlas automáticamente.
 - [Introducción y login](docs/CORRECCION_TOUCH_LOGIN.md)
 - [Vinculación de dispositivo](docs/VINCULACION_DISPOSITIVO.md)
 - [Flujo BLE y Wi-Fi](docs/BLE_WIFI_IOS.md)
+- [Vinculación, cuentas y sincronización](docs/VINCULACION_DISPOSITIVO.md)
 - [Today y calendario](docs/TODAY_CALENDARIO.md)
 - [Tarea rápida](docs/TAREA_RAPIDA.md)
 - [Tarea en equipo](docs/FLUJO_EQUIPOS.md)

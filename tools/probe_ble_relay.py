@@ -1,10 +1,11 @@
-"""Physical encrypted relay diagnostic for the exact registered development unit.
+"""Physical encrypted relay diagnostic for an explicitly selected test unit.
 
 Uses the local backend service implementation with operator Firestore access;
 does not substitute for the iPhone/Firebase-token acceptance test.
 No credentials, task contents or envelopes are printed.
 """
 import asyncio
+import argparse
 import json
 import os
 from pathlib import Path
@@ -14,14 +15,20 @@ import sys
 
 from bleak import BleakClient, BleakScanner
 
-IDF = Path('C:/Espressif/v5.4.2/esp-idf')
+IDF = Path(os.environ['IDF_PATH'])
 os.environ['IDF_PATH'] = str(IDF)
 sys.path.insert(0, str(IDF / 'tools/esp_prov'))
 from security.security1 import Security1
 
 
 async def main():
-    device = await BleakScanner.find_device_by_name('HAVIT-SYNC-95AA', timeout=15)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--device-name', required=True, help='Exact advertised HAVIT-SYNC-… name')
+    parser.add_argument('--device-id', required=True, help='Full identity read from havit-info')
+    parser.add_argument('--binding-id', required=True, help='Current binding ID confirmed by its owner')
+    parser.add_argument('--app-backend', required=True, type=Path, help='Path to the HAVIT app repository')
+    args = parser.parse_args()
+    device = await BleakScanner.find_device_by_name(args.device_name, timeout=15)
     if not device:
         raise RuntimeError('Expected BLE sync service not found')
     async with BleakClient(device, timeout=20) as client:
@@ -55,11 +62,11 @@ async def main():
             assert 0 < len(chunk) <= 160
             raw.extend(chunk)
         envelope = json.loads(raw)
-        assert envelope['deviceId'] == 'havit-2884859195aa'
-        assert envelope['bindingId'] == 'ec4f1956-e76d-4cfb-b1b5-3c24b5004f2a'
-        backend = Path(__file__).resolve().parents[2] / 'XTOOL/Havit/backend'
+        assert envelope['deviceId'] == args.device_id
+        assert envelope['bindingId'] == args.binding_id
+        backend = args.app_backend / 'backend'
         result = await asyncio.to_thread(subprocess.run,
-            ['node', str(backend / 'scripts/probe_relay.cjs')], input=bytes(raw), capture_output=True,
+            ['node', str(backend / 'scripts/probe_relay.cjs'), args.device_id, args.binding_id], input=bytes(raw), capture_output=True,
             cwd=backend / 'functions')
         assert result.returncode == 0, 'Backend rejected encrypted proof (details suppressed)'
         reply = json.loads(result.stdout)
@@ -69,7 +76,7 @@ async def main():
             await send(b'\x04' + struct.pack('<I', offset) + result.stdout[offset:offset+160])
         await send(b'\x05')
         print('PASS: BLE Security 1, encrypted device proof, exact identity/binding, backend snapshot and persisted ESP ACK.')
-        print('deviceId=' + envelope['deviceId'] + ' bindingId=' + envelope['bindingId'])
+        print('Selected device identity and binding matched.')
 
 
 if __name__ == '__main__':

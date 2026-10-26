@@ -4,7 +4,7 @@
 
 El firmware usa ESP-IDF 5.4.2, `wifi_provisioning`, NimBLE y protocomm Security 1 (X25519 + AES-CTR + prueba de posesión). BLE transporta las credenciales; Wi-Fi obtiene una dirección IP del router. Obtener una IP no demuestra que Internet o el backend estén disponibles.
 
-El firmware implementa el endpoint cifrado `havit-claim`, la confirmación `ack_claim` con persistencia en NVS dedicada, la publicación autenticada de la sesión y la consulta del estado real de vinculación por HTTPS. La app iOS todavía debe leer `havit-info`, guardar la prueba en Keychain, calcular su hash, enviar `ack_claim` y llamar a la API después de iniciar sesión. Las rutas de tareas no están implementadas.
+El firmware implementa `havit-info`, `havit-claim`, la confirmación `ack_claim`, la publicación autenticada de la sesión y la consulta del vínculo por HTTPS. iOS implementa la lectura y validación de identidad, Keychain, ACK, provisión Wi-Fi y reclamación tras login. La API de actividades funciona por HTTPS/Wi-Fi y por relay BLE cifrado cuando el teléfono tiene Internet. La guía vigente está en [VINCULACION_DISPOSITIVO.md](VINCULACION_DISPOSITIVO.md) y en [la arquitectura de HAVIT-APP](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/ARCHITECTURE.md).
 
 ## Cómo probar en HAVIT
 
@@ -14,7 +14,7 @@ El firmware implementa el endpoint cifrado `havit-claim`, la confirmación `ack_
 4. Pide el escaneo desde la app. El ESP32-S3 devuelve las redes que él alcanza. Elige una red de 2.4 GHz e introduce su contraseña en el teléfono.
 5. La pantalla cambia a «Conectando a Wi-Fi» solo cuando recibe las credenciales. «Wi-Fi conectado» aparece al obtener una IP real por DHCP.
 6. Tras obtener IP, HAVIT publica por HTTPS una prueba que iOS confirmó que guardó en Keychain. El estado pasa a «Esperando a HAVIT móvil» hasta que la app inicie sesión y el servidor vincule el dispositivo. Un toque no confirma propiedad.
-7. Cuando `GET /v1/device/link` informa `linked`, HAVIT muestra «Dispositivo vinculado». Continuar abre las vistas locales actuales; la API de tareas sigue pendiente y no se afirma que se hayan sincronizado actividades.
+7. Cuando `GET /v1/device/link` informa `linked`, HAVIT muestra «Dispositivo vinculado». Después de ese estado, las actividades se consultan y actualizan con la API compartida; la pantalla debe reflejar la revisión recibida y los cambios aún pendientes.
 8. Reinicia: la placa usa la red de NVS y se reconecta. Con red guardada no vuelve a anunciar BLE automáticamente. «Ver / iniciar conexión» muestra el estado real de esa red sin simular los pasos Bluetooth. Para cambiarla, usa «Volver» → «Restablecer Wi-Fi» → «Borrar y configurar». Se eliminó el gesto oculto de pulsación larga.
 
 El gestor reemplaza la configuración Wi-Fi al recibir otra red. No se borra la partición NVS ni el resto de datos. Si NVS requiere recuperación, se muestra un error y se conserva en lugar de ejecutar `nvs_flash_erase()`.
@@ -110,7 +110,7 @@ device.sendData(path: "havit-info", data: Data("{}".utf8)) { data, error in
 Respuesta de ejemplo, sin identidad ni credenciales reales:
 
 ```json
-{"protocol":1,"device_id":"havit-001122334455","name":"HAVIT-4455","wifi_connected":false,"ip":"","presence_confirmed":false,"account_linked":false,"identity_provisioned":true}
+{"protocol":1,"device_id":"havit-DEVICE_ID","name":"HAVIT-ABCD","wifi_connected":false,"ip":"","presence_confirmed":false,"account_linked":false,"identity_provisioned":true}
 ```
 
 El endpoint solo funciona durante la sesión BLE cifrada. No dependas de que siga disponible después de `.success`: el gestor puede cerrar BLE al responder el estado de Wi-Fi. La app conoce el éxito de Wi-Fi por `provision` y el estado de la cuenta por la API.
@@ -125,19 +125,25 @@ Debe ocurrir después de Security 1 y antes de mandar SSID/contraseña. Conserva
 4. Solo entonces llama a `device.provision(ssid:passPhrase:)`. El secreto original permanece en Keychain para presentarlo a la API después de iniciar sesión; el dispositivo conserva únicamente ID/hash/ACK y publica el hash con su credencial propia.
 5. Tras login/registro, iOS obtiene el Firebase ID token y llama a `POST /v1/devices/claim` con `deviceId`, `claimSessionId` y `claimSecret`. Reintenta `409 CLAIM_NOT_READY` con el `retryAfterSeconds` indicado mientras la prueba siga vigente. Al éxito, borra la prueba de Keychain.
 
-La petición y respuesta BLE completas, errores, expiración y esquema HTTP están en `XTOOL/DEVICE-API-CONTRACT.md`, sección 4. El firmware no imprime PoP, secreto, hash ni token de unidad. Una repetición idéntica de `prepare_claim` dentro de la ventana devuelve la misma prueba; después del ACK devuelve solo metadatos. Una sesión BLE nueva tras reinicio no recupera un secreto que nunca recibió el ACK. Al abrir deliberadamente otra ventana BLE desde Wi-Fi restablecido, HAVIT descarta una prueba anterior solo si no está vinculada, para que iOS pueda guardar y confirmar una nueva. Una unidad vinculada no abre otra reclamación.
+La petición y respuesta BLE completas, errores, expiración y esquema HTTP están en [API y alta del dispositivo](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/backend/README.md). El firmware no imprime PoP, secreto, hash ni token de unidad. Una repetición idéntica de `prepare_claim` dentro de la ventana devuelve la misma prueba; después del ACK devuelve solo metadatos. Una sesión BLE nueva tras reinicio no recupera un secreto que nunca recibió el ACK. Al abrir deliberadamente otra ventana BLE desde Wi-Fi restablecido, HAVIT descarta una prueba anterior solo si no está vinculada, para que iOS pueda guardar y confirmar una nueva. Una unidad vinculada no abre otra reclamación.
 
 ### Recuperar un ACK anterior que no está en Keychain
 
 Si `prepare_claim` devuelve `state: acknowledged` y el iPhone no conserva el secreto de ese `claim_session_id`, iOS debe llamar por el mismo endpoint BLE cifrado a `{"protocol":1,"op":"restart_claim"}`. El firmware comprueba que la identidad exista y que no tenga un vínculo confirmado, elimina solo la prueba pendiente y responde con una prueba nueva que iOS guarda y confirma antes de Wi-Fi. La autenticación de cuenta y la propiedad única siguen validándose en el backend. Esta recuperación evita pedir que se borre Wi-Fi o que se use USB.
 
-## Estado del alta de unidad y comprobaciones físicas
+## Registro histórico de pruebas — 2026-10-21
+
+El siguiente apartado registra el estado de desarrollo de esa fecha y está
+superado por la integración actual. Para el flujo vigente y las capacidades de
+tareas, consulta VINCULACION_DISPOSITIVO.md y los contratos enlazados allí.
+
+## Estado del alta de unidad y comprobaciones físicas — histórico
 
 La placa aún no tiene la credencial propia del backend. Antes del recorrido real hay que:
 
 1. Identificar el `device_id` completo mostrado por `havit-info`.
 2. Dar de alta exactamente esa unidad con la herramienta de operador y generar el archivo local `identity.csv` fuera del repositorio.
-3. Programar la tabla de particiones que incorpora `havit_identity` en `0xC10000` y escribir la imagen de identidad únicamente en esa partición, según `Havit/backend/README.md`.
+3. Programar la tabla de particiones que incorpora `havit_identity` en `0xC10000` y escribir la imagen de identidad únicamente en esa partición, según [backend/README.md](https://github.com/romdesigns0-dotcom/HAVIT-APP/blob/main/backend/README.md).
 
 La tabla reserva 24 KiB al final de la app de 12 MiB; la NVS normal conserva su dirección y contenido. Un `app-flash` no instala la tabla modificada. La compilación se completó; todavía no se han flasheado la tabla nueva ni el firmware, y no se ha escrito una credencial en el dispositivo.
 
@@ -160,7 +166,7 @@ La tabla reserva 24 KiB al final de la app de 12 MiB; la NVS normal conserva su 
 
 Las vistas de conexión no se recorren mediante toques de demostración. Si se usa la red guardada, se muestra su conexión directamente y se explica su origen; si se restablece, el recorrido comienza en Bluetooth y espera los eventos reales de la app. Hay un botón «Volver» en las pantallas de estado. No se muestra una cuenta autenticada al terminar Wi-Fi. Los textos tienen bandas separadas y límites de altura; el cuerpo se ajusta con las métricas de Instrument Sans para no invadir botones.
 
-## Estado de implementación (2026-10-21)
+## Estado de implementación (2026-10-21) — histórico
 
 Compilación final correcta: 4,022,816 bytes (0x3d6220), 68 % libre en la partición de aplicación. Carga por COM5 con verificación de hash, solo aplicación desde 0x10000. Se comprobó reconexión real de la red previamente guardada y obtención de IP durante la integración. En la revisión final LVGL siguió activo a los 31 y 41 segundos, con 93,415 bytes de heap interno libre y 6,812,344 bytes de PSRAM libre en esas muestras, sin pánico en el intervalo observado. No son métricas de pico ni una prueba prolongada.
 
